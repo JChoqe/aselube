@@ -3,11 +3,7 @@ define([
     'app',
     './routerGeneral',
     './routerProceso',
-    './routerAutomocion',
-    './routerIndustriales',
-    './routerMarinosAviacion',
-    './routerGrasas'
-    //'./routerBodega'
+    './routerAutomocion'
 
 ], function (app) {
     app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$compileProvider', '$translateProvider', 'InitConfigProvider', function ($stateProvider, $urlRouterProvider, $locationProvider, $compileProvider, $translateProvider, InitConfigProvider) {
@@ -137,128 +133,7 @@ define([
                     }
                 },
             })
-
-
-            .state('App.Industriales', {
-                template: "<ui-view></ui-view>",
-                controller: 'StateParentCtrl',
-                //params: {
-                //    IDFILTRO: ["aKdBfMd", "ebSLam"]
-                //},
-
-                params: {
-                    IDFILTRO: {
-                        array: true,
-                        value: [
-                            {
-                                title: 'Tiempo',
-                                icon: 'icofont icofont-checked',
-                                idFiltro: 'aKdBfMd'
-                            },
-                            {
-                                title: 'Otros',
-                                icon: 'icofont icofont-quote-left',
-                                idFiltro: 'ebSLam'
-                            }
-                        ]
-                    },
-                    isThisArray: true
-                },
-
-                resolve: {
-                    dataApp: function (getAppService, InitConfig) {
-                        return getAppService.getDataApp(InitConfig.appVentas); //.$promise;
-                    }
-                },
-            })
-
-
-            .state('App.MarinosAviacion', {
-                template: "<ui-view></ui-view>",
-                controller: 'StateParentCtrl',
-                //params: {
-                //    IDFILTRO: ["aKdBfMd", "ebSLam"]
-                //},
-
-                params: {
-                    IDFILTRO: {
-                        array: true,
-                        value: [
-                            {
-                                title: 'Tiempo',
-                                icon: 'icofont icofont-checked',
-                                idFiltro: 'aKdBfMd'
-                            },
-                            {
-                                title: 'Otros',
-                                icon: 'icofont icofont-quote-left',
-                                idFiltro: 'ebSLam'
-                            }
-                        ]
-                    },
-                    isThisArray: true
-                },
-
-                resolve: {
-                    dataApp: function (getAppService, InitConfig) {
-                        return getAppService.getDataApp(InitConfig.appVentas); //.$promise;
-                    }
-                },
-            })
-
-
-            .state('App.Grasas', {
-                template: "<ui-view></ui-view>",
-                controller: 'StateParentCtrl',
-                //params: {
-                //    IDFILTRO: ["aKdBfMd", "ebSLam"]
-                //},
-
-                params: {
-                    IDFILTRO: {
-                        array: true,
-                        value: [
-                            {
-                                title: 'Tiempo',
-                                icon: 'icofont icofont-checked',
-                                idFiltro: 'aKdBfMd'
-                            },
-                            {
-                                title: 'Otros',
-                                icon: 'icofont icofont-quote-left',
-                                idFiltro: 'ebSLam'
-                            }
-                        ]
-                    },
-                    isThisArray: true
-                },
-
-                resolve: {
-                    dataApp: function (getAppService, InitConfig) {
-                        return getAppService.getDataApp(InitConfig.appVentas); //.$promise;
-                    }
-                },
-            })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             //**************************************
-
-
             .state('App.Ventas', {
                 template: "<ui-view></ui-view>",
                 controller: 'StateParentCtrl',

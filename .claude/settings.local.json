@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Remove-Item -Recurse -Force \"c:\\\\Users\\\\Jherlan\\\\Documents\\\\Qlik\\\\Sense\\\\Extensions\\\\aselube\\\\js\\\\Controllers\\\\_Routes\\\\routerIndustriales.js\" \"c:\\\\Users\\\\Jherlan\\\\Documents\\\\Qlik\\\\Sense\\\\Extensions\\\\aselube\\\\js\\\\Controllers\\\\_Routes\\\\routerMarinosAviacion.js\" \"c:\\\\Users\\\\Jherlan\\\\Documents\\\\Qlik\\\\Sense\\\\Extensions\\\\aselube\\\\js\\\\Controllers\\\\_Routes\\\\routerGrasas.js\" \"c:\\\\Users\\\\Jherlan\\\\Documents\\\\Qlik\\\\Sense\\\\Extensions\\\\aselube\\\\views\\\\_Ventas\\\\Industriales\" \"c:\\\\Users\\\\Jherlan\\\\Documents\\\\Qlik\\\\Sense\\\\Extensions\\\\aselube\\\\views\\\\_Ventas\\\\MarinosAviacion\" \"c:\\\\Users\\\\Jherlan\\\\Documents\\\\Qlik\\\\Sense\\\\Extensions\\\\aselube\\\\views\\\\_Ventas\\\\Grasas\")"
+    ]
+  }
+}
