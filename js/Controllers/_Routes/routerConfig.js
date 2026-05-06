@@ -61,7 +61,7 @@
 
                 resolve: {
                     dataApp: function (getAppService, InitConfig) {
-                        return getAppService.getDataApp(InitConfig.appVentas); //.$promise;
+                        return getAppService.getDataApp(InitConfig.appInformeTitularidad);
                     }
                 },
             })
@@ -127,7 +127,7 @@
 
                 resolve: {
                     dataApp: function (getAppService, InitConfig) {
-                        return getAppService.getDataApp(InitConfig.appVentas); //.$promise;
+                        return getAppService.getDataApp(InitConfig.appINE);
                     }
                 },
             })
