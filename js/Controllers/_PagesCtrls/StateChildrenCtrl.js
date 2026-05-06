@@ -38,7 +38,6 @@ define([
             return defer.promise;
         }
 
-
         //Rastro de migas
         if ($stateParams.PATH) {
             if (InitConfig.multilanguage == true) {
@@ -64,8 +63,6 @@ define([
             }
 
         }
-
-
 
         //Carga de Objetos
         var _itemHome = $('.row-page .qlik-embed').length;
@@ -159,7 +156,6 @@ define([
             });
         }
 
-
         //Navegación de KPIS
         $rootScope.goToPage = function ($event) {
             var _url = $($event.currentTarget).attr('data-url-page');
@@ -180,6 +176,3 @@ define([
     });
 
 });
-
-
-
