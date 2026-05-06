@@ -26,6 +26,12 @@ define([
         this.appVentas = 'Quandox';  // Local
         // this.appVentas = 'cadef709-0665-4e98-80cc-2ae4fdb3a363';  // Servidor
 
+        this.appInformeTitularidad = 'TIT_DASHBOARD';  // Local
+        // this.appInformeTitularidad = '';  // Servidor
+
+        this.appINE = 'INE_03_APP';  // Local
+        // this.appINE = '';  // Servidor
+
         this.$get = function () {
             return $this;
         }
