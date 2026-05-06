@@ -13,7 +13,7 @@ define([
     'angular'
 ], function (qlik, app, $, angular) {
     app.controller('PageControllerCtrl', function ($scope, $rootScope, $timeout, $state) {
-        $rootScope.apiKey = 'SEAT - After Sales';
+        $rootScope.apiKey = 'Quandox.qvf';
         //Themes Inicial
         $rootScope.ThemesInit = "_theme-mashup";//"MZP_Theme-Imagen-ICEA";
         //Themes Imagen
