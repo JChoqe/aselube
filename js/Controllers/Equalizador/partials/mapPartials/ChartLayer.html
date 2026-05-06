@@ -1,0 +1,52 @@
+﻿<div class="em-item em-item-inner em-checkbox-component">
+    <div class="value">
+        <label class="lui-checkbox lui-checkbox--inverse">
+            <input class="lui-checkbox__input" type="checkbox" ng-model="item.show" tid="value" ng-change="changeCapa(item)" aria-invalid="false">
+            <div class="lui-checkbox__check-wrap">
+                <span class="lui-checkbox__check"></span>
+                <span class="lui-checkbox__check-text label" aria-disabled="false">{{'equalizer.label.mostrarcapa' | translate}}</span>
+            </div>
+        </label>
+    </div>
+</div>
+<div class="em-switch-component border-bottom">
+    <div class="label" aria-disabled="false">
+        <div class="title">{{'equalizer.label.mostraretiqueta' | translate}}</div>
+        <div class="value" ng-if="item.showLabel">{{'equalizer.label.activado' | translate}}</div>
+        <div class="value" ng-if="!item.showLabel">{{'equalizer.label.desactivado' | translate}}</div>
+    </div>
+    <div lui-class-list="classList" class="lui-switch lui-switch--inverse">
+        <label class="lui-switch__label">
+            <input type="checkbox" ng-model="item.showLabel" class="lui-switch__checkbox " ng-change="changeLabel(item)" aria-invalid="false">
+            <span class="lui-switch__wrap">
+                <span class="lui-switch__inner"></span>
+                <span class="lui-switch__switch"></span>
+            </span>
+        </label>
+    </div>
+</div>
+
+
+<div class="em-grouped" ng-if="item.grafico == 'barChart'">
+    <div class="em-item em-slider-component" tcl="slider" tid="barHeight">
+        <div class="label">{{'equalizer.label.alto' | translate}}</div>
+        <div class="value">
+            <div class="slider" id="slider-0" ng-model="value" ></div>
+        </div>
+    </div>
+    <div class="em-item em-slider-component" tcl="slider" tid="barWidth">
+        <div class="label">{{'equalizer.label.ancho' | translate}}</div>
+        <div class="value">
+            <div class="slider" id="slider-1" ng-model="value"></div>
+        </div>
+    </div>
+</div>
+
+<div class="em-grouped" ng-if="item.grafico == 'pieChart'">
+    <div class="em-item em-slider-component">
+        <div class="label">{{'equalizer.label.rangotarta' | translate}}</div>
+        <div class="value">
+            <div class="slider" id="slider-{{item.orden}}" ng-model="value"></div>
+        </div>
+    </div>
+</div>

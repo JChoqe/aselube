@@ -1,0 +1,219 @@
+﻿<div id="compileEquializador" ng-controller="tableCtrl" class="qv-soft-property-panel">
+    <div class="em-confirm-overlay" ng-if="hasChanged && applying">
+        <section>
+            <div class="lui-icon lui-icon--control"></div>
+            <p class="title">{{'equalizer.modal.cambios'  | translate}}</p>
+            <p>{{'equalizer.modal.cambiosexplicacion'  | translate}}</p>
+        </section>
+        <section class="panel-bottom">
+            <button lui-class-list="classList" ng-if="canSave" qva-activate="addPatches($event);" tid="apply" class="lui-button lui-button--inverse">{{'equalizer.btn.aplicar'  | translate}}</button>
+            <button lui-class-list="classList" qva-activate="cancelConfirm($event);" tid="cancel" class="lui-button lui-button--inverse">{{'equalizer.btn.cancelar'  | translate}}</button>
+        </section>
+    </div>
+    <div class="blockEquializador" ng-class="{'active' : blockEquializador == true}"></div>
+    <div id="box_contenido_equalizador">
+        <div id="header-equalizer">
+            <img src="./assets/img/logos/Titulo-Equilizer-001b.png" />
+        </div>
+        <div class="box_section_equializador accordion" id="acordion" role="tablist">
+
+
+
+
+            <!-- Presentación-->
+            <div class="panel">
+                <div class="col-lg-12" role="tab">
+                    <h4 class="em-section-header em-item" data-toggle="collapse" href="#collapsePresentacion" role="button" aria-expanded="true" aria-controls="collapsePresentacion">
+                        <span class="em-item-icon lui-icon lui-icon--view"></span>
+                        <span class="em-text">{{'equalizer.label.presentacion'  | translate}}</span>
+                    </h4>
+                </div>
+                <div id="collapsePresentacion" class="collapse show" role="tabpanel" data-parent="#acordion">
+                    <div class="innerCollapse">
+                        <div class="em-component em-data-component em-list-component">
+                            <div class="em-list-container">
+                                <!--Totales-->
+                                <div class="col-lg-12">
+                                    <div class="em-switch-component">
+                                        <div class="label ">
+                                            <div class="title">{{'equalizer.label.tablatotales' | translate}}</div>
+                                            <div class="value">{{totalesLabel}}</div>
+                                        </div>
+                                        <div class="lui-switch">
+                                            <label class="lui-switch__label" for="tablatotales">
+                                                <input type="checkbox" ng-model="tipoTotales" class="lui-switch__checkbox" aria-label="Label" id="tablatotales" ng-change="changeTablaTotales($event, tipoTotales)" ng-checked="tipoTotales" />
+                                                <span class="lui-switch__wrap">
+                                                    <span class="lui-switch__inner"></span>
+                                                    <span class="lui-switch__switch"></span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="em-item em-item-inner em-dropdown-component" ng-if="!tipoTotales">
+                                        <div class="label" title="{{'equalizer.label.posicion'  | translate}}">
+                                            {{'equalizer.label.posicion'  | translate}}
+                                        </div>
+                                        <div class="value">
+                                            <select class="lui-select lui-select--inverse" ng-model="posicionTotales" ng-change="cambiarPosicionTotales(posicionTotales)">
+                                                <option label="{{'equalizer.label.ninguna'  | translate}}" value="noTotals">{{'equalizer.label.ninguna'  | translate}}</option>
+                                                <option label="{{'equalizer.label.principio'  | translate}}" value="top">{{'equalizer.label.principio'  | translate}}</option>
+                                                <option label="{{'equalizer.label.final'  | translate}}" value="bottom">{{'equalizer.label.final'  | translate}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-bottom"></div>
+                                <!--Desplazamiento-->
+                                <div class="col-lg-12">
+                                    <!--Primera columna-->
+                                    <div class="em-item em-item-inner">{{'equalizer.label.desplazamiento' | translate}}</div>
+                                    <div class="em-item em-item-inner em-checkbox-component" title="{{'equalizer.label.inmovilizarColumna' | translate}}">
+                                        <div class="value">
+                                            <label class="lui-checkbox lui-checkbox--inverse">
+                                                <input class="lui-checkbox__input" type="checkbox" ng-model="inmovilizarColumna" ng-change="cambiarInmovilizar(inmovilizarColumna)" aria-invalid="false">
+                                                <div class="lui-checkbox__check-wrap">
+                                                    <span class="lui-checkbox__check"></span>
+                                                    <span class="lui-checkbox__check-text label ng-binding">{{'equalizer.label.inmovilizarColumna' | translate}}</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="spacing_block"></div>
+                                    <!--Horizontal-->
+                                    <div class="em-item em-item-inner em-checkbox-component" title="{{'equalizer.label.desHorizontal' | translate}}">
+                                        <div class="value">
+                                            <label class="lui-checkbox lui-checkbox--inverse">
+                                                <input class="lui-checkbox__input" type="checkbox" ng-model="desHorizontal" ng-change="cambiarDesHorizontal(desHorizontal)" aria-invalid="false">
+                                                <div class="lui-checkbox__check-wrap">
+                                                    <span class="lui-checkbox__check"></span>
+                                                    <span class="lui-checkbox__check-text label ng-binding">{{'equalizer.label.desHorizontal' | translate}}</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-bottom"></div>
+                                <!--Ajustes de texto multilinea-->
+                                <div class="col-lg-12">
+                                    <!--Texto Cabecera-->
+                                    <div class="em-item em-item-inner">{{'equalizer.label.ajustesTexto' | translate}}</div>
+                                    <div class="em-item em-item-inner em-checkbox-component" title="{{'equalizer.label.textoCabecera' | translate}}">
+                                        <div class="value">
+                                            <label class="lui-checkbox lui-checkbox--inverse">
+                                                <input class="lui-checkbox__input" type="checkbox" ng-model="wrapCabeceras" ng-change="cambiarWrapCabeceras(wrapCabeceras)" aria-invalid="false">
+                                                <div class="lui-checkbox__check-wrap">
+                                                    <span class="lui-checkbox__check"></span>
+                                                    <span class="lui-checkbox__check-text label ng-binding">{{'equalizer.label.textoCabecera' | translate}}</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="spacing_block"></div>
+                                    <div class="em-item em-item-inner em-checkbox-component" title="{{'equalizer.label.textoCelda' | translate}}">
+                                        <div class="value">
+                                            <label class="lui-checkbox lui-checkbox--inverse">
+                                                <input class="lui-checkbox__input" type="checkbox" ng-model="wrapCeldas" ng-change="cambiarWrapCeldas(wrapCeldas)" aria-invalid="false">
+                                                <div class="lui-checkbox__check-wrap">
+                                                    <span class="lui-checkbox__check"></span>
+                                                    <span class="lui-checkbox__check-text label ng-binding">{{'equalizer.label.textoCelda' | translate}}</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-bottom"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Titulos -->
+            <div class="panel">
+                <div class="col-lg-12" role="tab">
+                    <h4 class="em-section-header em-item" data-toggle="collapse" href="#collapseTitulos" role="button" aria-expanded="false" aria-controls="collapseTitulos">
+                        <span class="em-item-icon lui-icon lui-icon--edit"></span>
+                        <span class="em-text">{{'equalizer.label.titulos' | translate}}</span>
+                    </h4>
+                </div>
+                <div id="collapseTitulos" class="collapse" role="tabpanel" data-parent="#acordion">
+                    <div class="innerCollapse">
+                        <div class="em-component em-data-component em-list-component">
+                            <div class="em-list-container">
+                                <!--Titulos-->
+                                <div class="col-lg-12 border-bottom">
+                                    <div class="em-switch-component">
+                                        <div class="label ">
+                                            <div class="title">{{'equalizer.label.mostrartitulo' | translate}}</div>
+                                            <div class="value">{{titulosLabel}}</div>
+                                        </div>
+                                        <div class="lui-switch">
+                                            <label class="lui-switch__label" for="showTitles">
+                                                <input type="checkbox" ng-model="showTitles" class="lui-switch__checkbox" aria-label="Label" id="showTitles" ng-change="changeShowTitles($event, showTitles)" ng-checked="showTitles" />
+                                                <span class="lui-switch__wrap">
+                                                    <span class="lui-switch__inner"></span>
+                                                    <span class="lui-switch__switch"></span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="em-data" tid="titulos" ng-if="showTitles">
+                                    <div class="em-item em-item-inner">
+                                        <label class="lui-label">{{'equalizer.label.titulo' | translate}}</label>
+                                        <input class="lui-input lui-input--inverse" ng-model-options="{ updateOn: 'blur', allowInvalid: true }" ng-model="titleObject" id="titleObject" name="titleObject" ng-change="changeTitle(titleObject)" />
+                                    </div>
+                                    <div class="em-item em-item-inner">
+                                        <label class="lui-label">{{'equalizer.label.subtitulo' | translate}}</label>
+                                        <input class="lui-input lui-input--inverse" ng-model-options="{ updateOn: 'blur', allowInvalid: true }" ng-model="subTitleObject" id="subTitleObject" name="subTitleObject" ng-change="changeSubTitle(subTitleObject)" />
+                                    </div>
+                                    <div class="em-item em-item-inner">
+                                        <label class="lui-label">{{'equalizer.label.piepagina' | translate}}</label>
+                                        <input class="lui-input lui-input--inverse" ng-model-options="{ updateOn: 'blur', allowInvalid: true }" ng-model="footnoteObject" id="footnoteObject" name="footnoteObject" ng-change="changeFootnote(footnoteObject)" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filtros -->
+            <filtersEqualizador></filtersEqualizador>
+        </div>
+    </div>
+    <div id="box_action_equalizador">
+        <button ng-click="closeEqualizador($event)" class="cerrar">
+            <span>{{'equalizer.btn.cerrar' | translate}}</span>
+        </button>
+        <button ng-click="clearPatches($event)" ng-disabled="checkPatches()">
+            <span>{{'equalizer.btn.descartar' | translate}}</span>
+        </button>
+        <button ng-if="canSave" ng-click="IsApplying($event)" ng-disabled="checkPatches()">
+            <span>{{'equalizer.btn.aplicar' | translate}}</span>
+        </button>
+    </div>
+
+
+    <div class="modal" tabindex="-1" role="dialog" id="modalDlg" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-title">{{"equalizer.modal.atencion" | translate}}</span>
+                </div>
+                <div class="modal-body">
+                    <strong ng-if="$scope.canSave"> <span>{{"equalizer.modal.aviso" | translate}}</span></strong>
+                    <strong ng-if="!$scope.canSave"> <span>{{"equalizer.modal.avisoClose" | translate}}</span></strong>
+                </div>
+                <div class="modal-footer">
+                    <button ng-if="canSave" class="lui-button  lui-dialog__button" ng-click="IsApplying($event)">{{'equalizer.btn.guardar' | translate}}</button>
+                    <button class="lui-button  lui-dialog__button" data-dismiss="modal" ng-click="clearPatchesModal($event)">{{'equalizer.btn.descartar' | translate}}</button>
+                    <button class="lui-button  lui-dialog__button" data-dismiss="modal">{{'equalizer.btn.cerrar' | translate}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

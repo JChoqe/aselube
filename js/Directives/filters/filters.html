@@ -1,0 +1,54 @@
+﻿<div class="item-header-options" data-app="{{dataApp}}" ng-click="toggleFilters($event)">
+    <span class="title-option title-option-filters">
+        <span class="badge badge-default selectionsnotification"></span>
+        <span class="txt-xs"><span class="lui-icon lui-icon--filterpane qs-no-margin" aria-hidden="true"></span></span>
+        <span class="txt-xl">{{'views.label.filtros'  | translate}}</span>
+    </span>
+</div>
+<div id="filters-panel" ng-class="{ 'activo' : OpenFiltros}">
+    <div id="cabeceraFiltros">
+        <div id="box_selecciones">
+            <ul class="nav pull-right">
+
+                <li class="nav-item" id="linkAbreFiltros">
+                    <a href="javascript:void(0);" class="nav-link dropdown-toggle" data-toggle="dropdown" data-close-others="true" aria-haspopup="true">
+                        <span class="username username-hide-on-mobile">{{'views.label.selecciones'  | translate}}</span>
+                        <span id="selectionsnotification" class="badge badge-default">
+                        </span>
+                    </a>
+                    <ul id="selections" class="dropdown-menu" aria-labelledby="linkAbreFiltros" autoClose="nonInput"></ul>
+                </li>
+                <li class="nav-item liFiltrosClose" ng-click="toggleFilters($event)">
+                    <a href="javascript:void(0)" class="nav-link">
+                        <span class="username">{{'views.label.filtros'  | translate}}</span>
+                        <i class="lui-icon lui-icon--close"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="clear-all"></div>
+    </div>
+    <div id="cuerpoFiltros">
+        <div class="col-md-12 box_object box_object_filter_item clearfix" ng-if="!paneles">
+            <div class="qlik-embed filtrosHome" data-qlik-objid="{{IdFiltros}}" ng-model="model"></div>
+        </div>
+        <div id="accordion" ng-if="paneles"> 
+            <div class="card" ng-repeat="item in listPaneles track by $index">
+                <div class="card-header" id="headingOne">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{$index}}" aria-expanded="{{$index == 0 ? 'true' : ''}}" aria-controls="collapse{{$index}}">
+                        <span class="text-header-card"><span class="{{item.icon}} ico-20 pr-2"></span>{{ item.title}}</span>
+                    </button>
+                </div>
+
+                <div id="collapse{{$index}}" class="collapse" ng-class="$index == 0 ? 'show' : ''" data-parent="#accordion">
+                    <div class="card-body box_object box_object_filter_item">
+                        <div class="qlik-embed filtrosHome" data-qlik-objid="{{item.id}}" ng-model="model"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>

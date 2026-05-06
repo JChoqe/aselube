@@ -1,0 +1,28 @@
+﻿.qv-global-selections {
+    transition: all .3s ease 0s;
+}
+#box-current-selecctions {
+    height: 38px !important;
+    padding: 0;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+.open-equalizador #box-current-selecctions {
+    z-index: 0;
+}
+.qv-global-selections {
+    top: 148px;
+    width: calc(100% - 280px) !important;
+    height: calc(100% - 148px) !important;
+    left: 280px;
+    right: 0;
+}
+.sidebar-collapsed .qv-global-selections {
+    top: 148px;
+    width: calc(100% - 80px) !important;
+    height: calc(100% - 148px) !important;
+    left: 80px;
+    right: 0;
+}

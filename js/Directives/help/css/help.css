@@ -1,0 +1,54 @@
+﻿
+.dialogo-help-mz .lui-dialog__body {
+    overflow: hidden;
+}
+.dialogo-help-mz .tab-view-wrapper {
+    height: 100%;
+    flex: 1;
+}
+.dialogo-help-mz #lui-tabview {
+    border: 1px solid rgba(0,0,0,.1);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dialogo-help-mz #lui-tabview .lui-tabset .lui-tab {
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: transparent;
+    border-left: 1px solid transparent;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+
+.dialogo-help-mz #lui-tabview .lui-tabset {
+    /*border-left: 1px solid rgba(0,0,0,.1);*/
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    /*border-right: 1px solid rgba(0,0,0,.1);*/
+    overflow: hidden;
+    min-height: 38px;
+}
+.dialogo-help-mz #lui-tabview .tabs-content {
+    height: -webkit-calc(100% - 38px);
+    height: -moz-calc(100% - 38px);
+    height: calc(100% - 38px);
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.dialogo-help-mz #lui-tabview .tabs-content iframe {
+    width:100% !important;
+    height:98% !important;
+}
+
+.dialogo-help-mz .lui-dialog__title img {
+    max-height: 25px !important;
+}
+
+.dialogo-help-mz h4 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom:1rem;
+}

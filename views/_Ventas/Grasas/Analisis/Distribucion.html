@@ -1,0 +1,50 @@
+﻿<!--
+    Speeddial parámetros :
+    object-id : id del oBjeto
+    object-equalizer : muestra botón configuraciones true/false
+
+-->
+<!--
+ShowContextMenu parámetros'
+    1.- event
+    2.- id del objeto
+    3.- Ocultar botón vista de table
+    4.- Ocultar botón exportar excel
+    5.- No tiene Menú de exploración
+-->
+
+
+<div id="page-nav">
+    <div class="sc_menu clearfix">
+        <div id="box_ListaMenu">
+            <ul id="listaMenuContenidos" ng-include="'views/_Ventas/Grasas/_GrasasMenu.html'"></ul>
+        </div>
+    </div>
+</div>
+<div id="box-current-selecctions">
+    <div style="width: 100%;" current-selections="app" class="CurrentSelections"></div>
+</div>
+<div class="row-page row m-0 p-0" id="page-container">
+    <div class="mzh-xl-15 mzh-lg-15 mzh-md-100 mzh-sm-100 mzh-xs-150 mzh-20 box_object_kpi" ng-include="'views/_Ventas/Grasas/_GrasasKpi.html'"></div>
+
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 mzh-xl-85 mzh-lg-85 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-80 box_object">
+        <speeldial object-id="b34f81c4-dd9b-4d10-ae3b-3ba070284883" object-equalizer="true"></speeldial>
+        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'b34f81c4-dd9b-4d10-ae3b-3ba070284883')"></i></span>
+        <div class="qlik-embed hasDataView" id="b34f81c4-dd9b-4d10-ae3b-3ba070284883" data-qlik-objid="b34f81c4-dd9b-4d10-ae3b-3ba070284883" ng-right-click="ShowContextMenu($event,'b34f81c4-dd9b-4d10-ae3b-3ba070284883')"></div>
+    </div>
+
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 mzh-xl-85 mzh-lg-85 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-80 box_object p-0 m-0">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mzh-xl-50 mzh-lg-50 mzh-md-50 mzh-sm-50 mzh-xs-50 mzh-50 box_object">
+            <speeldial object-id="3e6d9109-3777-4152-98f9-2218cbf7f44f" object-equalizer="true"></speeldial>
+            <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'3e6d9109-3777-4152-98f9-2218cbf7f44f')"></i></span>
+            <div class="qlik-embed hasDataView" id="3e6d9109-3777-4152-98f9-2218cbf7f44f" data-qlik-objid="3e6d9109-3777-4152-98f9-2218cbf7f44f" ng-right-click="ShowContextMenu($event,'3e6d9109-3777-4152-98f9-2218cbf7f44f')"></div>
+        </div>
+
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mzh-xl-50 mzh-lg-50 mzh-md-50 mzh-sm-50 mzh-xs-50 mzh-50 box_object">
+            <speeldial object-id="7352e928-ea8b-45e4-b149-3169f614a991" object-equalizer="true"></speeldial>
+            <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'7352e928-ea8b-45e4-b149-3169f614a991')"></i></span>
+            <div class="qlik-embed hasDataView" id="7352e928-ea8b-45e4-b149-3169f614a991" data-qlik-objid="7352e928-ea8b-45e4-b149-3169f614a991" ng-right-click="ShowContextMenu($event,'7352e928-ea8b-45e4-b149-3169f614a991')"></div>
+        </div>
+    </div>
+
+</div>

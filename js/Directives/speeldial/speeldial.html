@@ -1,0 +1,9 @@
+﻿
+<div class="cover-option-object hidden-equializador">    
+    <a class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect hidden-equializador" ng-controller="equalizadorCtrl" ng-class="Equalizershow == 'true' ? '' : 'd-none'" data-rel="{{ObjectId}}" ng-click="openEqualizer(ObjectId)"><i class="lui-list__aside  item-icon  lui-icon  lui-icon--control"></i></a>
+    <a class="mdl-button ico-expand hidden-equializador" data-rel="{{ObjectId}}" ng-click="getFullSize($event)"><i class="ico-expand lui-icon lui-icon--expand"></i></a>
+    <a class="mdl-button ico-contract hidden-equializador" ng-click="lostFullSize($event);"><i class="ico-contract lui-icon lui-icon--collapse"></i></a>
+    <!--<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" data-rel="{{ObjectId}}" ng-click="openPopupPDF('#opcionesPDF',$event)"><i class="ico-shot iconFontello-export saveqvPdf"></i></button>
+    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" ng-click="imgExport($event)" data-rel="{{ObjectId}}"><i class="ico-shot iconFontello-camera-alt"></i></button>
+    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" ng-click="excelExport($event)" data-rel="{{ObjectId}}"><i class="ico-shot icofont icofont-file-excel"></i></button>-->
+</div>

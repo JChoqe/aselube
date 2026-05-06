@@ -1,0 +1,34 @@
+﻿<ul class="em-list em-list-content em-sortable-list">
+    <li ng-repeat="sortableItem in orderList  | orderBy : 'orden' track by $index" data-orden="{{sortableItem.orden}}" data-index="{{sortableItem.index}}" data-id="{{sortableItem.id}}">
+        <div class="em-item em-expandable" qva-activate="itemClicked($event,sortableItem);">
+            <div class="em-list-index">{{$index + 1}}</div>
+            <span class="em-toggle-expand em-item-icon lui-icon" ng-class="(sortableItem.expanded==true) ? 'lui-icon--triangle-bottom' : 'lui-icon--triangle-right'"></span>
+            <span class="em-text" title="Mes Acumulado">{{sortableItem.name}}</span>
+            <span class="lui-icon lui-icon--handle em-move-item em-sortable-handle" ng-if="sortableItem.sortable" title="Mover"></span>
+        </div>
+        <div class="em-section-content" ng-if="sortableItem.expanded">
+            <div class="grouped">
+                <div tid="sortOptions">
+                    <div class="em-item em-item-inner em-radiobuttons-component">
+                        <label class="lui-radiobutton  lui-radiobutton--inverse" tid="1" title="Ascendente">
+                            <input class="lui-radiobutton__input" type="radio" ng-value="{{sortableItem.id}}" ng-change="change(sortableItem.id)" name="{{sortableItem.id}}" value="1">
+                            <div class="lui-radiobutton__radio-wrap" qva-tabindex="0">
+                                <span class="lui-radiobutton__radio"></span>
+                                <span class="lui-radiobutton__radio-text">Ascendente</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="em-item em-item-inner em-radiobuttons-component">
+                        <label class="lui-radiobutton  lui-radiobutton--inverse" tid="-1" title="Descendente">
+                            <input class="lui-radiobutton__input" type="radio" ng-value="{{sortableItem.id}}" ng-change="change(sortableItem.id)" name="{{sortableItem.id}}" value="-1">
+                            <div class="lui-radiobutton__radio-wrap" qva-tabindex="0">
+                                <span class="lui-radiobutton__radio"></span>
+                                <span class="lui-radiobutton__radio-text">Descendente</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>

@@ -1,0 +1,81 @@
+﻿<!--
+    Speeddial parámetros :
+    object-id : id del oBjeto
+    object-equalizer : muestra botón configuraciones true/false
+
+-->
+<div id="page-nav">
+    <div class="sc_menu clearfix">
+        <div id="box_ListaMenu">
+            <ul id="listaMenuContenidos" ng-include="'views/_Ventas/Automocion/_AutomocionMenu.html'"></ul>
+        </div>
+    </div>
+</div>
+<div id="box-current-selecctions">
+    <div style="width: 100%;" current-selections="app" class="CurrentSelections"></div>
+</div>
+<div class="row-page row m-0 p-0" id="page-container">
+    <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 mzh-xl-60 mzh-lg-60 mzh-md-100 mzh-sm-100 mzh-xs-200 mzh-60 box_object box_mix_object">
+        <speeldial object-id="beaa1871-b6df-403e-ba84-211e3a0cafb0" object-equalizer="true"></speeldial>
+        <div class="box_mix">
+            <div class="box_object_inner_kpi kpi-mix mzh-xl-30 mzh-lg-30 mzh-md-20 mzh-sm-40 mzh-xs-50 mzh-30">
+
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12 mzh-xl-100 mzh-lg-100 mzh-md-100 mzh-sm-50 mzh-xs-33 mzh-100 item-inner-kpi">
+                    <div class="qlik-embed qlik-embed-kpi" data-qlik-objid="bPQR"></div>
+                </div>
+
+
+            </div>
+
+            <div class="box_object_inner_grafico mzh-xl-70 mzh-lg-70 mzh-md-80 mzh-sm-60 mzh-xs-50 mzh-70">
+                <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'bd1d5454-5b85-46ab-9292-28ce282f82bf')"></i></span>
+                <div class="qlik-embed hasDataView" id="bd1d5454-5b85-46ab-9292-28ce282f82bf" data-qlik-objid="bd1d5454-5b85-46ab-9292-28ce282f82bf" ng-right-click="ShowContextMenu($event,'bd1d5454-5b85-46ab-9292-28ce282f82bf')"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 mzh-xl-60 mzh-lg-60 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-60 box_object">
+        <speeldial object-id="45465e3b-06b1-4fec-9367-31a75c5cbdd2" object-equalizer="true"></speeldial>
+        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'45465e3b-06b1-4fec-9367-31a75c5cbdd2')"></i></span>
+        <div class="qlik-embed hasDataView" id="45465e3b-06b1-4fec-9367-31a75c5cbdd2" data-qlik-objid="45465e3b-06b1-4fec-9367-31a75c5cbdd2" ng-right-click="ShowContextMenu($event,'45465e3b-06b1-4fec-9367-31a75c5cbdd2')"></div>
+    </div>
+
+    <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 mzh-xl-40 mzh-lg-40 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-40 box_object">
+        <speeldial object-id="12bf537f-6ab8-4b31-a5fb-314c4cb51166" object-equalizer="true"></speeldial>
+        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'12bf537f-6ab8-4b31-a5fb-314c4cb51166')"></i></span>
+        <div class="qlik-embed hasDataView" id="12bf537f-6ab8-4b31-a5fb-314c4cb51166" data-qlik-objid="12bf537f-6ab8-4b31-a5fb-314c4cb51166" ng-right-click="ShowContextMenu($event,'12bf537f-6ab8-4b31-a5fb-314c4cb51166')"></div>
+    </div>
+
+
+
+
+
+
+    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 mzh-xl-40 mzh-lg-40 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-100 box_object">
+        <speeldial object-id="1762a6d2-ab6b-4438-9549-370bd509fdac" object-equalizer="false"></speeldial>
+        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'1762a6d2-ab6b-4438-9549-370bd509fdac')"></i></span>
+        <div class="qlik-embed hasDataView" id="1762a6d2-ab6b-4438-9549-370bd509fdac" data-qlik-objid="1762a6d2-ab6b-4438-9549-370bd509fdac" ng-right-click="ShowContextMenu($event,'1762a6d2-ab6b-4438-9549-370bd509fdac')"></div>
+    </div>
+
+    <!-- Kpis -->
+    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 mzh-xl-40 mzh-lg-40 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-40 m-0 p-0 kpi-dashboard">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mzh-xl-50 mzh-lg-50 mzh-md-33 mzh-sm-50 mzh-xs-50 mzh-50 box_object">
+            <div class="mz-box-kpi-inner">
+                <div class="qlik-embed qlik-embed-kpi" id="fed14d43-a58d-4098-a0d7-050da2a69e1c" data-qlik-objid="fed14d43-a58d-4098-a0d7-050da2a69e1c"></div>
+            </div>
+        </div>
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mzh-xl-50 mzh-lg-50 mzh-md-66 mzh-sm-50 mzh-xs-50 mzh-50 m-0 p-0 row">
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 mzh-xl-100 mzh-lg-100 mzh-md-50 mzh-sm-50 mzh-xs-50 mzh-50 box_object">
+                <div class="mz-box-kpi-inner">
+                    <div class="qlik-embed qlik-embed-kpi" id="AxAdDsP" data-qlik-objid="AxAdDsP"></div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 mzh-xl-100 mzh-lg-100 mzh-md-50 mzh-sm-50 mzh-xs-50 mzh-50 box_object">
+                <div class="mz-box-kpi-inner">
+                    <div class="qlik-embed qlik-embed-kpi" id="WUPYKU" data-qlik-objid="WUPYKU"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

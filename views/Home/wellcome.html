@@ -1,0 +1,259 @@
+﻿<div id="page-content-wrapper-inicio">
+    <!--<div id="backdrop"></div>-->
+    <!--<div id="particles-js"></div>-->
+    <!--<div id="content-wellcome" class="clearfix mz-slider-area">
+
+        <div id="wellcome-header">
+            <div id="wellcome-app">
+                <img src="assets/img/logos/Titulo-app-b.png" />
+            </div>
+        </div>
+
+        <div id="wellcome-menu">
+            <div class="item-menu" id="dailySales">
+                <div class="kpi-inner">
+                </div>
+                <div class="text-inner mz-box-kpi">
+                    <h1>Ventas</h1>
+                    <div class="desc-item mz-box-kpi-inner">
+                        <div class="qlik-embed qlik-embed-kpi col-12 mzh-30" data-qlik-objid="crrFfwU">
+                            <div ng-include="'views/partial/loader_qlik.html'"></div>
+                        </div>
+                        <div class="qlik-embed mzh-50" id="TVqVq" data-qlik-objid="KuDHjN">
+                            <div ng-include="'views/partial/loader_qlik.html'"></div>
+                        </div>
+                        <div class="ver-app" data-ui-sref="App.Ventas.Dashboard">
+                            <i class="icofont icofont-plus-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div id="wellcome-logo">
+            <img src="assets/img/logos/Logo-MZ-001.png" />
+        </div>
+
+    </div>-->
+
+
+    <div id="fondo-gotas-linea">
+
+        <div id="gotas-linea-1">
+            <img src="assets/img/wellcomeImages/Grupo-28.svg" />
+        </div>
+        <div id="gotas-linea-2">
+            <img src="assets/img/wellcomeImages/Grupo-28.svg" />
+        </div>
+        <div id="gotas-linea-3">
+            <img src="assets/img/wellcomeImages/Grupo-28.svg" />
+        </div>
+
+    </div>
+
+
+    <div id="content-welcome">
+
+        <div id="panel-izdo">
+            <img class="imagen-1" src="assets/img/wellcomeImages/Imagen-3.png" />
+            <img class="imagen-2" src="assets/img/wellcomeImages/Grupo-21.svg" />
+        </div>
+
+        <div id="panel-dcho">
+            <div id="fila-1">
+                <div class="a-1">
+                    <!--<img src="assets/img/wellcomeImages/Capa_1.svg" />-->
+                    <span style="color: #7c932e; font-size: 40px;">ESTADÍSTICA DE VENTAS</span>
+                </div>
+                <div class="b-1">
+                    <img src="assets/img/logos/Grupo-20.svg" />
+                </div>
+            </div>
+
+            <div id="fila-2">
+                <ul id="menu-init">
+                    <li>
+                        <a href="javascript:void(0)" data-ui-sref="App.General.Dashboard.Dashboard">
+                            <span class="welcome-icon"><i class="icofont icofont-pixels"></i></span>
+                            <span class="welcome-normal"> General </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:void(0)" data-ui-sref="App.Proceso.Dashboard.Dashboard">
+                            <span class="welcome-icon"><i class="icofont icofont-loop"></i></span>
+                            <span class="welcome-normal"> Proceso </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:void(0)" data-ui-sref="App.Automocion.Dashboard.Dashboard">
+                            <span class="welcome-icon"><i class="icofont icofont-automation"></i></span>
+                            <span class="welcome-normal"> Automoción </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-ui-sref="App.Industriales.Dashboard.Dashboard">
+                            <span class="welcome-icon"><i class="icofont icofont-industries-2"></i></span>
+                            <span class="welcome-normal"> Industriales </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-ui-sref="App.MarinosAviacion.Dashboard.Dashboard">
+                            <span class="welcome-icon"><i class="icofont icofont-sea-plane"></i></span>
+                            <span class="welcome-normal"> Marinos y Aviación </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" data-ui-sref="App.Grasas.Dashboard.Dashboard">
+                            <span class="welcome-icon"><i class="icofont icofont-water-drop"></i></span>
+                            <span class="welcome-normal"> Grasas </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="fila-3" class="desc-item mz-box-kpi-inner col-12 mzh-50">
+                <div class="qlik-embed hasDataView" id="mCzjv" data-qlik-objid="mCzjv" ng-right-click="ShowContextMenu($event,'mCzjv')"></div>
+            </div>
+
+            <div class="iconos-ayuda">
+                <img src="assets/img/wellcomeImages/help.svg" />
+                <img src="assets/img/wellcomeImages/bell.svg" />
+                <img src="assets/img/wellcomeImages/gear.svg" />
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div id="panel_alertas_wellcome" ng-if="demo">
+    <button id="btn_alertas_wellcome" ng-click="toogleAlertas();" data-toggle="tooltip" data-placement="top" title="Panel de alertas">
+        <i class="icofont icofont-alarm alertIcon animate-shake"></i>
+        <span class="badge">5</span>
+    </button>
+    <div class="panel-body container">
+        <div class="coverScroll">
+            <div class="scrollPanel">
+                <table class="todoList">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="optionsCheckboxes"><span class="checkbox-material"><span class="check"></span></span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>El porcentaje de Ventas es inferior al 50%</td>
+                            <td class="td-actions">
+                                <button type="button" rel="tooltip" title="" class="btnTodo btnTodo-danger btn-xs" data-original-title="Remove">
+                                    <i class="icofont icofont-close"></i>
+                                </button>
+                                <button type="button" rel="tooltip" title="" class="btnTodo btn-xs" data-original-title="Edit Task">
+                                    <i class="icofont icofont-edit-alt"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="optionsCheckboxes"><span class="checkbox-material"><span class="check"></span></span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>El margen de ventas es superior al 25%</td>
+                            <td class="td-actions">
+                                <button type="button" rel="tooltip" title="" class="btnTodo btnTodo-danger btn-xs" data-original-title="Remove">
+                                    <i class="icofont icofont-close"></i>
+                                </button>
+                                <button type="button" rel="tooltip" title="" class="btnTodo btn-xs" data-original-title="Edit Task">
+                                    <i class="icofont icofont-edit-alt"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="optionsCheckboxes"><span class="checkbox-material"><span class="check"></span></span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>El margen de ventas Promo es inferior al 30%</td>
+                            <td class="td-actions">
+                                <button type="button" rel="tooltip" title="" class="btnTodo btnTodo-danger btn-xs" data-original-title="Remove">
+                                    <i class="icofont icofont-close"></i>
+                                </button>
+                                <button type="button" rel="tooltip" title="" class="btnTodo btn-xs" data-original-title="Edit Task">
+                                    <i class="icofont icofont-edit-alt"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="optionsCheckboxes" checked=""><span class="checkbox-material"><span class="check"></span></span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>Hay 255 artículos nuevos</td>
+                            <td class="td-actions">
+                                <button type="button" rel="tooltip" title="" class="btnTodo btnTodo-danger btn-xs" data-original-title="Remove">
+                                    <i class="icofont icofont-close"></i>
+                                </button>
+                                <button type="button" rel="tooltip" title="" class="btnTodo btn-xs" data-original-title="Edit Task">
+                                    <i class="icofont icofont-edit-alt"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="optionsCheckboxes" checked=""><span class="checkbox-material"><span class="check"></span></span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>Las ventas Promo son superiores al 60%</td>
+                            <td class="td-actions">
+                                <button type="button" rel="tooltip" title="" class="btnTodo btnTodo-danger btn-xs" data-original-title="Remove">
+                                    <i class="icofont icofont-close"></i>
+                                </button>
+                                <button type="button" rel="tooltip" title="" class="btnTodo btn-xs" data-original-title="Edit Task">
+                                    <i class="icofont icofont-edit-alt"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<button id="btn_help" ng-click="toogleHelp();" ng-if="demo">
+    <i class="icofont icofont-question-circle ico-30"></i> Vídeos de ayuda
+</button>
+
+
+<!-- <optionswellcome ng-if="demo"></optionswellcome> -->
+

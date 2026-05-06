@@ -1,0 +1,16 @@
+{
+  "type": "mashup",
+  "name": "aselube",
+  "author": "Jesús Yepes López",
+  "homepage": "",
+  "keywords": "qlik-sense, visualization, mashup",
+  "license": "",
+  "repository": "",
+  "dependencies": {
+    "qlik-sense": ">=3.0.x"
+  },
+  "preview": "images.png",
+  "Tipo": "Financiero, Servicios",
+  "Cliente": "Mercanza"
+}
+

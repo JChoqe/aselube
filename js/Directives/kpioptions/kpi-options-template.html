@@ -1,0 +1,23 @@
+﻿<div class="lui-dialog dialogo-help-mz" style="width: 80%; height:80%;"> 
+    <div class="lui-dialog__header">
+        <div class="lui-dialog__title">{{'views.modal.selectkpi'  | translate}}            
+        </div>
+    </div>
+    <div class="lui-dialog__body position-relative">
+        <div id="loader-cover"><div id="loading-export"><div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div>
+        <div id="cover_object" class="col-lg-12 mzh-100 box_object_inner_kpi row m-0 pl-0">
+            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-12 mzh-xl-25 mzh-lg-25 mzh-md-33 mzh-sm-50 mzh-xs-50 item-inner-kpi m-0 p-0" ng-repeat="item in arrayObject  | unique : 'ID' track by $index" ng-click="openConfigKpi($event, item.ID)">
+                <div class="view">
+                    <div class="qlik-embed qlik-embed-kpi" data-qlik-objid="{{item.ID}}" id="{{item.ID}}"></div>
+                    <div class="mask">
+                        <p>{{item.descripcion}}</p>
+                        <a href="javascript:void(0)" class="info"><i class="icofont icofont-ui-edit"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lui-dialog__footer">
+        <button class="lui-button  lui-dialog__button" ng-click="closeDialogParent();">{{'views.modal.cerrar'  | translate}}</button>
+    </div>
+</div>

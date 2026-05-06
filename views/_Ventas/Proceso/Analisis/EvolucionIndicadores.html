@@ -1,0 +1,58 @@
+﻿<!--
+    Speeddial parámetros :
+    object-id : id del oBjeto
+    object-equalizer : muestra botón configuraciones true/false
+
+-->
+<!--
+ShowContextMenu parámetros'
+    1.- event
+    2.- id del objeto
+    3.- Ocultar botón vista de table
+    4.- Ocultar botón exportar excel
+    5.- No tiene Menú de exploración
+-->
+
+
+<div id="page-nav">
+    <div class="sc_menu clearfix">
+        <div id="box_ListaMenu">
+            <ul id="listaMenuContenidos" ng-include="'views/_Ventas/Proceso/_ProcesoMenu.html'"></ul>
+        </div>
+    </div>
+</div>
+<div id="box-current-selecctions">
+    <div style="width: 100%;" current-selections="app" class="CurrentSelections"></div>
+</div>
+<div class="row-page row m-0 p-0" id="page-container">
+    <div class="mzh-xl-15 mzh-lg-15 mzh-md-100 mzh-sm-100 mzh-xs-150 mzh-20 box_object_kpi" ng-include="'views/_Ventas/Proceso/_ProcesoKpi.html'"></div>
+
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mzh-xl-45 mzh-lg-45 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-80 box_object">
+        <speeldial object-id="fb90da0a-e774-45e0-b7f5-df91da745a47" object-equalizer="true"></speeldial>
+        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'fb90da0a-e774-45e0-b7f5-df91da745a47')"></i></span>
+        <div class="qlik-embed hasDataView" id="fb90da0a-e774-45e0-b7f5-df91da745a47" data-qlik-objid="fb90da0a-e774-45e0-b7f5-df91da745a47" ng-right-click="ShowContextMenu($event,'fb90da0a-e774-45e0-b7f5-df91da745a47')"></div>
+    </div>
+
+    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 mzh-xl-40 mzh-lg-40 mzh-md-50 mzh-sm-50 mzh-xs-100 mzh-40 box_object">
+        <speeldial object-id="bc406dea-c427-4715-b457-2872ee48aa52" object-equalizer="true"></speeldial>
+        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'bc406dea-c427-4715-b457-2872ee48aa52')"></i></span>
+        <div class="qlik-embed hasDataView" id="bc406dea-c427-4715-b457-2872ee48aa52" data-qlik-objid="bc406dea-c427-4715-b457-2872ee48aa52" ng-right-click="ShowContextMenu($event,'bc406dea-c427-4715-b457-2872ee48aa52')"></div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 mzh-xl-40 mzh-lg-40 mzh-md-50 mzh-sm-50 mzh-xs-100 mzh-40 box_object">
+        <speeldial object-id="ec85ab29-959d-4c6a-9297-08c0122d13de" object-equalizer="true"></speeldial>
+        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,' ec85ab29-959d-4c6a-9297-08c0122d13de')"></i></span>
+        <div class="qlik-embed hasDataView" id=" ec85ab29-959d-4c6a-9297-08c0122d13de" data-qlik-objid=" ec85ab29-959d-4c6a-9297-08c0122d13de" ng-right-click="ShowContextMenu($event,' ec85ab29-959d-4c6a-9297-08c0122d13de')"></div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 mzh-xl-40 mzh-lg-40 mzh-md-50 mzh-sm-50 mzh-xs-100 mzh-40 box_object">
+        <speeldial object-id="865d7963-1960-40f9-933b-f8a9581baa0c" object-equalizer="true"></speeldial>
+        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'865d7963-1960-40f9-933b-f8a9581baa0c')"></i></span>
+        <div class="qlik-embed hasDataView" id="865d7963-1960-40f9-933b-f8a9581baa0c" data-qlik-objid="865d7963-1960-40f9-933b-f8a9581baa0c" ng-right-click="ShowContextMenu($event,'865d7963-1960-40f9-933b-f8a9581baa0c')"></div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 mzh-xl-40 mzh-lg-40 mzh-md-50 mzh-sm-50 mzh-xs-100 mzh-40 box_object">
+        <speeldial object-id="bee7cc44-32d5-41ca-a1da-f31809aeee2a" object-equalizer="true"></speeldial>
+        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'bee7cc44-32d5-41ca-a1da-f31809aeee2a')"></i></span>
+        <div class="qlik-embed hasDataView" id="bee7cc44-32d5-41ca-a1da-f31809aeee2a" data-qlik-objid="bee7cc44-32d5-41ca-a1da-f31809aeee2a" ng-right-click="ShowContextMenu($event,'bee7cc44-32d5-41ca-a1da-f31809aeee2a')"></div>
+    </div>
+
+
+</div>

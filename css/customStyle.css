@@ -1,0 +1,244 @@
+﻿#main-page {
+    background-image: none !important;
+    /*background-color: #1e314f;*/
+    background-color: #1e4846;
+}
+
+/*Logo carga*/
+#logo-block {
+    position: fixed;
+    top: 25%;
+    z-index: 999999;
+    max-width: 342px;
+    max-height: 200px;
+}
+
+.loaderEquializador {
+    color: aliceblue;
+}
+
+
+#mz-settings {
+    background-color: #c48f2c;
+}
+
+.mz-settings-link svg {
+    -webkit-animation: none !important;
+    animation: none !important;
+}
+
+
+/*=====================
+CABECERA
+=====================*/
+/*#logo-cliente {
+    width: 213px;
+}*/
+#logo-app {
+    justify-content: center;
+    height: auto;
+}
+
+    #logo-app > img {
+        width: 70%;
+    }
+
+#logo-cliente > img {
+    width: 35%;
+}
+
+#header-options {
+    padding: 0 42px 0 10px;
+}
+
+    #header-options .mz-list-options .item-option {
+        padding: 0 20px;
+    }
+
+#item-left > div.item-option.ico-menu-collapse {
+    padding-left: 0;
+}
+
+#item-left > div.item-option.ico-menu-collapse {
+    padding: 0 !important;
+}
+
+
+
+/*=====================
+SIDEBAR
+=====================*/
+#main-menu .sidebar-wrapper > .list-nav {
+    padding-top: 12%;
+}
+
+#sidebar-wrapper > ul > li > a {
+    margin-top: 5%;
+}
+
+    #sidebar-wrapper > ul > li > a > p,
+    #sidebar-wrapper > ul > li.active > a > p {
+        font-size: 0.9rem;
+    }
+
+#main-menu .sidebar-wrapper .list-nav li.active > a:not([data-toggle=collapse]) {
+    /*background-color: rgba(109, 146, 146, .53);*/
+    background-color: transparent;
+    box-shadow: inset 0px -2px 0px 0px #c79a46;
+    border-radius: 0;
+}
+
+
+
+#menuVentas {
+    margin-left: 5%;
+}
+
+    #menuVentas > ul > li > a > span.sidebar-normal {
+        font-size: 0.75rem;
+    }
+
+#sidebar-wrapper > img {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    bottom: 7%;
+    left: 23%;
+}
+
+/*=====================
+DASHBOARD
+=====================*/
+
+/*KPI combinado con gráfico*/
+
+#page-container .box_object_inner_kpi.kpi-mix .qv-inner-object > div > div {
+    padding: 7% 0;
+}
+
+#page-container .box_object_inner_kpi.kpi-mix .text-container {
+    border-left: 5px solid #F18800;
+    margin: 0;
+    margin-top: 30px;
+}
+
+#page-container .box_object_inner_kpi.kpi-mix .value-container {
+    text-align: left;
+}
+
+    #page-container .box_object_inner_kpi.kpi-mix .value-container .value {
+        line-height: 1;
+        font-size: 1.8rem;
+    }
+
+    #page-container .box_object_inner_kpi.kpi-mix .value-container .label {
+        font-size: 1.3rem !important;
+    }
+
+
+/*KPI inferiores*/
+.kpi-dashboard .mz-box-kpi-inner .qlik-embed-kpi .text-container > div > div {
+    text-align: center;
+}
+
+bookmarks {
+    cursor: default;
+}
+
+
+.no-click {
+    pointer-events: none;
+    opacity: 0.65;
+}
+
+.active-kpi {
+    background-color: #c79a46 !important;
+}
+
+
+/*=====================
+HOJA KPIs
+=====================*/
+#page-container .hoja-KPI {
+    padding-bottom: 25px;
+}
+
+.box_mix .hoja-KPI .item-inner-kpi {
+    border-left: 5px solid #e6a62f;
+}
+
+#page-container .hoja-KPI .qv-inner-object > div > div > div {
+    display: flex;
+    justify-content: flex-start !important;
+}
+
+#page-container .hoja-KPI .qv-inner-object .text-container .value-container {
+    text-align: left;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#page-container .hoja-KPI .value-container .label {
+    font-size: 1.3rem !important;
+}
+
+#page-container .hoja-KPI .value-container .value {
+    font-size: 1.8rem !important;
+}
+
+#page-container .hoja-KPIgrafico .qv-inner-object > header > h1 {
+    justify-content: flex-end;
+}
+
+
+
+    #page-container .hoja-KPIgrafico .qv-inner-object > header > h1 > div {
+        font-weight: 100;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+
+
+
+
+
+/* /KPI VERSIÓN Septiembre 2020 */
+#main #main-page .sn-kpi .sn-kpi-data .sn-kpi-measure-wrapper {
+    font-size: inherit;
+}
+
+    #main #main-page .sn-kpi .sn-kpi-data .sn-kpi-measure-wrapper .sn-kpi-measure-title {
+        color: #fff;
+        font-size: 16px;
+    }
+
+#main #main-page .sn-kpi .sn-kpi-data .sn-kpi-value-wrapper .sn-kpi-value {
+    font-size: inherit;
+}
+
+    #main #main-page .sn-kpi .sn-kpi-data .sn-kpi-value-wrapper .sn-kpi-value .sn-kpi-ellips-text {
+        color: #fff;
+        font-size: 26px;
+    }
+
+#main #main-page .sn-kpi .sn-kpi-data .sn-kpi-value-wrapper .sn-kpi-secondary-wrapper .sn-kpi-value .sn-kpi-ellips-text,
+#main #main-page .sn-kpi .sn-kpi-data .sn-kpi-value-wrapper .sn-kpi-secondary-wrapper .sn-kpi-title.sn-kpi-ellips-text {
+    font-size: 14px;
+    padding-left: 7px;
+    color: #fff;
+}
+
+#main #main-page .box_mix_object .box_mix .box_object_inner_kpi .qlik-embed-kpi .sn-kpi .sn-kpi-data .sn-kpi-measure-wrapper,
+#main #main-page .box_mix_object .box_mix .box_object_inner_kpi .qlik-embed-kpi .sn-kpi .sn-kpi-data .sn-kpi-value-wrapper {
+    justify-content: flex-start;
+}
+
+#main #main-page .box_mix_object .box_mix .box_object_inner_kpi:not(.hoja-KPI) .qv-object-kpi .measure-wrapper,
+#main #main-page .box_mix_object .box_mix .box_object_inner_kpi:not(.hoja-KPI) .qv-object-kpi .value-wrapper,
+#main #main-page .box_mix_object .box_mix .box_object_inner_kpi:not(.hoja-KPI) .qv-object-kpi .sn-kpi-measure-wrapper,
+#main #main-page .box_mix_object .box_mix .box_object_inner_kpi:not(.hoja-KPI) .qv-object-kpi .sn-kpi-value-wrapper {
+    border-left: 5px solid #e6a62f;
+    padding-left: 10px;
+}

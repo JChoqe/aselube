@@ -1,0 +1,77 @@
+﻿<div class="lui-dialog dialogo-help-mz" style="width: 30%; height:40%;">
+    <div class="lui-dialog__header">
+        <div class="lui-dialog__title">
+            {{'views.modal.configuracion'  | translate}}
+        </div>
+    </div>
+    <div class="lui-dialog__body position-relative">
+        <div id="cover_object" class="col-lg-12 mzh-100 box_object_inner_kpi row m-0 pl-0">
+            <div class="col-lg-4 mzh-50">
+                <div class="qlik-embed" id="kpi-mod">
+
+                </div>
+            </div>
+            <div class="col-lg-8 mzh-50">
+                <div class="pp-component pp-items-component" tcl="items">
+                    <div class="pp-component pp-switch-component" tcl="switch">
+                        <div class="label">
+                            <div class="title" title="{{'template.label.enlazarhoja' | translate}}">{{'template.label.enlazarhoja' | translate}}</div>
+                            <div class="value" title="{{etiquetaUrl}}">{{etiquetaUrl}}</div>
+                        </div>
+                        <div lui-class-list="classList" class="lui-switch">
+                            <label class="lui-switch__label">
+                                <input type="checkbox" ng-model="activeUrlSheet" class="lui-switch__checkbox" ng-change="changeActiveUrlSheet(activeUrlSheet)" ng-checked="activeUrlSheet">
+                                <span class="lui-switch__wrap">
+                                    <span class="lui-switch__inner"></span>
+                                    <span class="lui-switch__switch"></span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="pp-component pp-dropdown-component" tcl="dropdown" id="activeUrlSheet" ng-class="activeUrlSheet == true ? 'active' : ''">
+                        <div class="value">
+                            <select class="lui-select" ng-model="statesUrlSelected" ng-change="captureValue(statesUrlSelected)" id="lui-select" ng-options="option.name for option in statesUrl track by option.value">
+                                <option></option>
+                            </select>
+                            <!--<select class="lui-select" id="lui-select">
+                                <option></option>
+                            </select>-->
+                        </div>
+                    </div>
+
+
+                    <!--<div class="pp-component pp-switch-component" tcl="switch">
+                        <div class="label">
+                            <div class="title" title="Abrir en una nueva pestaña">Abrir en una nueva pestaña</div>
+                            <div class="value" title="Activado"> Activado</div>
+                        </div>
+
+                        <div lui-class-list="classList" class="lui-switch">
+                            <label class="lui-switch__label">
+                                <input type="checkbox" ng-model="model" class="lui-switch__checkbox">
+                                <span class="lui-switch__wrap">
+                                    <span class="lui-switch__inner"></span>
+                                    <span class="lui-switch__switch"></span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>-->
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lui-dialog__footer">
+        <button class="lui-button  lui-dialog__button" ng-click="closeDialogChildren();">{{'views.modal.cerrar'  | translate}}</button>
+        <button class="lui-button  lui-dialog__button" ng-click="addKpi();">{{'views.modal.aceptar'  | translate}}</button>
+    </div>
+</div>
+<!--<div class="mz-overlay-backdrop" ng-if="showSelect" ng-class="showSelect == true ? 'active' : ''" ng-click="hideSelect()">
+    <div class="mz-select-panel">
+        <mz-option role="option" class="mz-option" id="mz-option-{{$index}}" tabindex="0" aria-disabled="false" ng-repeat="item in statesUrl track by $index" ng-click="addUrl(item.url)">
+            <span class="mz-option-text"> {{item.name}} </span>
+        </mz-option>
+    </div>
+</div>-->

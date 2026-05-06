@@ -1,0 +1,38 @@
+﻿<div class="qv-contextmenu" tid="context-menu" qva-outside="close($event)" style="position: absolute; top: {{TOP}}px; left: {{LEFT}}px;">
+    <div lui-class-list="classList" class="lui-popover">
+        <ul class="lui-list">
+            <li class="lui-list__item lui-list__action" ng-click="openEqualizer(ObjectId)" ng-controller="equalizadorCtrl" ng-if="haveEqualizador(ObjectId)">
+                <i class="lui-list__aside  item-icon  lui-icon  lui-icon--control"></i>
+                <span class="lui-list__text" title="{{'contextmenu.label.menuexploracion' | translate}}">{{'contextmenu.label.menuexploracion' | translate}}</span>
+            </li>
+            <li class="lui-list__item lui-list__action" tabindex="-1" ng-click="verDatos(ObjectId)" ng-if="!tableView(ObjectId) && haveTableView()">
+                <i class="lui-list__aside  item-icon  lui-icon  lui-icon--table"></i>
+                <span class="lui-list__text" title="{{'contextmenu.label.verdatos' | translate}}">{{'contextmenu.label.verdatos' | translate}}</span>
+            </li>
+            <li class="lui-list__item lui-list__action" tabindex="-1" ng-click="verGrafico(ObjectId)" ng-if="tableView(ObjectId) && haveTableView()">
+                <i class="lui-list__aside  item-icon  lui-icon  lui-icon--object"></i>
+                <span class="lui-list__text" title="{{'contextmenu.label.vergrafico' | translate}}">{{'contextmenu.label.vergrafico' | translate}}</span>
+            </li>
+            <li class="lui-list__item lui-list__action" tabindex="-1" ng-click="ExportImage(ObjectId)" ng-if="!tableView(ObjectId)">
+                <i class="lui-list__aside  item-icon  lui-icon  lui-icon--image"></i>
+                <span class="lui-list__text" title="{{'contextmenu.label.exportimagen' | translate}}">{{'contextmenu.label.exportimagen' | translate}}</span>
+            </li>
+            <li class="lui-list__item lui-list__action" tabindex="-1" ng-click="openPopupPDF(ObjectId)" ng-if="!tableView(ObjectId)">
+                <i class="lui-list__aside  item-icon  lui-icon  lui-icon--export"></i>
+                <span class="lui-list__text" title="{{'contextmenu.label.exportpdf' | translate}}">{{'contextmenu.label.exportpdf' | translate}}</span>
+            </li>
+            <li class="lui-list__item lui-list__action" tabindex="-1" ng-click="exportDatos(ObjectId)" ng-if="haveExportarDatos()">
+                <i class="lui-list__aside  item-icon  lui-icon  lui-icon--insert"></i>
+                <span class="lui-list__text" title="{{'contextmenu.label.exportdatos' | translate}}">{{'contextmenu.label.exportdatos' | translate}}</span>
+            </li>
+            <li class="lui-list__item lui-list__action" tabindex="-1" ng-click="expandirTodo(ObjectId)" ng-if="isPivotTable()">
+                <i class="lui-list__aside  item-icon  lui-icon  lui-icon--lui-icon lui-icon--plus"></i>
+                <span class="lui-list__text" title="{{'contextmenu.label.expandirtodo' | translate}}">{{'contextmenu.label.expandirtodo' | translate}}</span>
+            </li>
+            <li class="lui-list__item lui-list__action" tabindex="-1" ng-click="contraerTodo(ObjectId)" ng-if="isPivotTable()">
+                <i class="lui-list__aside  item-icon  lui-icon  lui-icon--lui-icon lui-icon--minus"></i>
+                <span class="lui-list__text" title="{{'contextmenu.label.contraertodo' | translate}}">{{'contextmenu.label.contraertodo' | translate}}</span>
+            </li>
+        </ul>
+    </div>
+</div>

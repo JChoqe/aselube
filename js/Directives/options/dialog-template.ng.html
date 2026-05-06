@@ -1,0 +1,75 @@
+﻿<div class="lui-dialog dialogo-help-mz" style="width: 60%; height:60%;"> 
+    <div class="lui-dialog__header">
+        <div class="lui-dialog__title">{{'views.acciones.ayuda'  | translate}}
+            <img class="img-fluid float-right" src="assets/img/logos/Logo-MZ-002.png" alt="Mercanza Logo">
+        </div>
+    </div>
+    <div class="lui-dialog__body">
+        <div class="tab-view-wrapper">
+            <lui-tab-view id="lui-tabview">
+                <lui-tabset>
+                    <lui-tab ref="tab1"><span class="tab-item"><span class="lui-icon lui-icon--info"></span> &nbsp; Acerca de</span></lui-tab>
+                    <lui-tab ref="tab2"><span class="tab-item"><span class="lui-icon lui-icon--selections-tool"></span> &nbsp; Selecciones</span></lui-tab>
+                    <lui-tab ref="tab3"><span class="tab-item"><span class="lui-icon lui-icon--search"></span> &nbsp; Buscar</span></lui-tab>
+                    <lui-tab ref="tab4"><span class="tab-item"><span class="lui-icon lui-icon--bookmark"></span> &nbsp; Marcadores </span></lui-tab>
+                    <lui-tab ref="tab5"><span class="tab-item"><span class="lui-icon lui-icon--control"></span> &nbsp; Tutorial </span></lui-tab>
+                </lui-tabset>
+                <lui-tab-content class="tabs-content" ref="tab1">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Acerca de</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>En Mercanza desarrollamos, desde 1991, soluciones tecnológicas de gestión y análisis, para todo tipo de empresas y todos los ámbitos funcionales, para lo cual, hemos diseñado un conjunto de servicios de valor añadido orientados a aportar mayor valor a los recursos tecnológicos de empresas y organismos públicos.</p>
+
+                            <p>Este enfoque nos permite incorporar a los negocios los productos y servicios que éstos precisan, independientemente de su tamaño o tipo de actividad que desarrollen.</p>
+
+                            <p>Mercanza es una empresa de servicios tecnológicos y de ingeniería, formada por más de 125 profesionales, con la más amplia y variada experiencia profesional, e implantación a nivel nacional. Nuestra experiencia de implantación de sistemas y proyectos en más de 2.000 clientes nos avala.</p>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">@2020 Mercanza | Madrid · Barcelona · Alicante · Girona · Sevilla · San Sebastián · Las Palmas · Ponferrada · Bogotá<br></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 ml-auto">
+                            <a href="https://www.mercanza.es" target="_blank">www.mercanza.es</a>
+                        </div>
+                    </div>
+                </lui-tab-content>
+                <lui-tab-content class="tabs-content" ref="tab2">
+                    <h4>Explorar con selecciones</h4>
+                    <p>Cada elemento de selección tiene una pequeña barra en la parte inferior que refleja los estados de selección de esa dimensión. En las barras se muestran tres estados: seleccionado (verde), alternativo (gris claro) y excluido (gris oscuro). Los valores bloqueados se indican con un icono de bloqueo.</p>
+                    <img src="js/Directives/help/images/ui_SelectionsBarLock.png" class="img-fluid" alt="Selecciones">
+                    <p>Cuando hace clic en un elemento de selección, aparece una ventana emergente. Esto le permite ver, editar o borrar esa selección. También puede buscar valores de dimensión o bloquear la selección. En la imagen siguiente el menú de selección está abierto. Puede que algunas opciones no estén disponibles, dependiendo de las selecciones que se hayan realizado anteriormente.</p>
+                    <img src="js/Directives/help/images/ui_SelectionsPopupMenu-new.png" class="img-fluid" alt="Selección">
+                </lui-tab-content>
+                <lui-tab-content class="tabs-content" ref="tab3">
+                    <h4>Utilizar la búsqueda inteligente</h4>
+                    <p>La búsqueda inteligente es la herramienta de búsqueda global de Qlik Sense, la cual le permite buscar en todo el conjunto de datos completo de su app desde cualquier hoja de la app. La búsqueda inteligente está disponible en la barra de selecciones en una hoja haciendo clic en <i class="icofont icofont-search"></i>.</p>
+                    <img src="js/Directives/help/images/ui_SmartSearchBar.png" class="img-fluid" alt="Búsqueda">
+                </lui-tab-content>
+                <lui-tab-content class="tabs-content" ref="tab4">
+                    <h4>Crear marcadores</h4>
+                    <p>Los marcadores le permiten guardar estados de selección específicos. Esto permite revisarlos más tarde y compartirlos con otros usuarios.</p>
+                    <ol style="margin-left: 1rem;list-style-type: decimal;">
+                        <li value="1"><p>Haga las selecciones en la hoja que desee guardar como marcador.</p></li>
+                        <li value="2"><p>Haga clic en <i class="icofont icofont-book-mark"></i> en la barra de herramientas.</p></li>
+                        <li value="3"><p>Haga clic en <b>Crear un nuevo marcador</b>.</p><p>El nombre de la hoja y un resumen de las selecciones se utilizan como título del marcador.</p></li>
+                        <li value="4"><p>Si desea utilizar otro nombre para el marcador, puede cambiarlo en <b>Título</b>.</p></li>
+                        <li value="5">Introduzca una descripción del marcador en <b>Descripción</b> si lo desea.</li>
+                    </ol>
+                </lui-tab-content>
+
+                <lui-tab-content class="tabs-content" ref="tab5">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/85QHuNNeaCg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </lui-tab-content>
+            </lui-tab-view>
+        </div>
+    </div>
+    <div class="lui-dialog__footer">
+        <button class="lui-button  lui-dialog__button" ng-click="closeDialog();">{{'views.modal.cerrar'  | translate}}</button>
+    </div>
+</div>

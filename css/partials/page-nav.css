@@ -1,0 +1,129 @@
+﻿#listaMenuContenidos > li,
+#listaMenuContenidos > li:hover > ul.subMenuVistas {
+    transition: all .3s ease 0s;
+}
+
+#page-nav {
+    background: #f2f3f8 !important;
+    border: none !important;
+    -webkit-box-shadow: 0px 1px 15px 1px rgba(69,65,78,0.1) !important;
+    box-shadow: 0px 1px 15px 1px rgba(69,65,78,0.1) !important;
+    height: 40px;
+    padding: 0 5px;
+    position: relative;
+    z-index: 2;
+}
+.open-equalizador #page-nav {
+    z-index:0;
+}
+#page-nav div.sc_menu {
+    width: 100%;
+    height: 40px;
+}
+#page-nav div.sc_menu #box_ListaMenu #listaMenuContenidos {
+    width: -moz-calc(100% - 0px) !important;
+    width: calc(100% - 0px) !important;
+    float: left;
+    height: 40px;
+    white-space: nowrap;
+    display: flex;
+    justify-content:flex-start;
+    align-content:center;
+    align-items:center;
+    list-style:none;
+}
+#listaMenuContenidos > li {
+    display: block;
+    float: left;
+    padding: 0 10px;
+    line-height: 40px;
+    position: relative;
+    margin-top: 0px;
+    margin-right: 10px;
+    color: #fff !important;
+    font-weight: 400;
+    color: #fff !important;
+    border-color: transparent;
+    border-bottom: none;
+}
+#listaMenuContenidos > li.activo_fijo,
+#listaMenuContenidos > li:hover {
+    color: #fff !important;
+    font-weight: 500;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    background-color: #09354a;
+    color: #fff !important;
+    background-image: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.08) 48%, rgba(255, 255, 255, 0.16) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.16)), color-stop(52%, rgba(255, 255, 255, 0.08)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background-image: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.08) 48%, rgba(255, 255, 255, 0.16) 100%);
+    background-image: -o-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.08) 48%, rgba(255, 255, 255, 0.16) 100%);
+    background-image: -ms-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.08) 48%, rgba(255, 255, 255, 0.16) 100%);
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.08) 48%, rgba(255, 255, 255, 0.16) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+    border-color: transparent;
+}
+
+#listaMenuContenidos > li > a {
+    color: #8c8c8c;
+    font-size: .8rem;
+    text-decoration: none;
+    display: block;
+}
+
+#listaMenuContenidos > li.activo_fijo a,
+#listaMenuContenidos > li:hover a {
+    color: #fff !important;
+}
+#listaMenuContenidos > li > ul.subMenuVistas {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: -30px;
+    background: #09354a;
+    list-style: none;
+    padding: 5px 8px;
+    -webkit-box-shadow: 0px 1px 15px 1px rgba(69,65,78,0.1) !important;
+    box-shadow: 0px 1px 15px 1px rgba(69,65,78,0.1) !important;
+    min-width:100%;
+}
+#listaMenuContenidos > li > ul.subMenuVistas > li {
+    margin-bottom: 5px;
+}
+#listaMenuContenidos > li > ul.subMenuVistas > li.activo_fijo {
+    background-image: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.08) 48%, rgba(255, 255, 255, 0.16) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.16)), color-stop(52%, rgba(255, 255, 255, 0.08)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background-image: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.08) 48%, rgba(255, 255, 255, 0.16) 100%);
+    background-image: -o-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.08) 48%, rgba(255, 255, 255, 0.16) 100%);
+    background-image: -ms-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.08) 48%, rgba(255, 255, 255, 0.16) 100%);
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.08) 48%, rgba(255, 255, 255, 0.16) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+}
+
+#listaMenuContenidos > li:hover > ul.subMenuVistas {
+    opacity: 1;
+    visibility: visible;
+    top:100%;
+}
+.ico-moreMenu {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+    transform: rotate(180deg);
+}
+#listaMenuContenidos > li:hover > ul.subMenuVistas > li > a {
+    font-size: .8rem;
+    text-decoration: none;
+    display: block;
+    padding: 0 8px;
+}
+#listaMenuContenidos > li:hover > ul.subMenuVistas > li > a:hover,
+#listaMenuContenidos > li > ul.subMenuVistas > li.activo_fijo {
+    background-color: hsla(0,0%,100%,.1);
+    border-radius: 5px;
+}
+
+
+@media only screen and (min-width : 320px) and (max-width : 1024px) {
+    #page-nav {
+        display:none;
+    }
+}

@@ -1,0 +1,28 @@
+﻿<div class="item-header-options" data-app="{{dataApp}}">
+    <span class="title-option">
+        <span class="txt-xs"><span class="lui-icon lui-icon--bookmark qs-no-margin" aria-hidden="true"></span></span>
+        <span class="txt-xl">{{'views.acciones.marcadores'  | translate}}</span>
+        <span class="lui-caret"></span>
+    </span>
+</div>
+<div class="list-bookmark">
+    <div class="wrapper-bookmark">
+        <div class="item-bookmark" ng-repeat="bookmark in arrBookmark track by $index" data-rel="{{bookmark.id}}" ng-class="{'active': bookmark.active == true}">
+            <div class="content-options">
+                <span class="title-bookmark">{{bookmark.title}}</span>
+                <div class="options-bookmark">
+                    <button class="item-option-bookmark" ng-click="deleteBookmark(bookmark.id)" ng-disabled="bookmark.active == true"><i class="lui-icon lui-icon--bin"></i></button>
+                    <!--<button class="item-option-bookmark" ng-click="editBookmark(bookmark.id)" ng-disabled="bookmark.active == true"><i class="lui-icon lui-icon--edit"></i></button>-->
+                    <button class="item-option-bookmark item-option-bookmark-active" ng-click="applyBookmark(bookmark.id, bookmark)"><i class="lui-icon lui-icon--tick"></i></button>
+                </div>
+            </div>
+            
+            <div class="item-bookmark-description" ng-if="bookmark.description">
+                {{bookmark.description}}
+            </div>
+        </div>
+    </div>
+    <div id="mz-add-bookmark">
+        <button class="lui-button  lui-button--gradient" ng-click="newBookmark();"><i class="lui-icon  lui-icon--bookmark float-left"></i>{{'views.acciones.aniadirmarcadores'  | translate}}</button>
+    </div>
+</div>

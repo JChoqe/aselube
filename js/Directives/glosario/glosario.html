@@ -1,0 +1,33 @@
+﻿<div class="item-header-options" data-app="{{dataApp}}" ng-click="openGlosary($event)">
+    <span class="title-option title-option-filters">
+        <span class="txt-xs"><span class="lui-icon lui-icon--library qs-no-margin" aria-hidden="true"></span></span>
+        <span class="txt-xl">{{'views.label.glosario'  | translate}}</span>
+    </span>
+</div>
+<div class="cover-glossary" id="glossary" ng-class="OpenGlosary == true ? 'active' : ''">
+    <header id="header-glossary">
+        <a href="javascript:void(0)" ng-click="openGlosary()">
+            <i class="icofont icofont-close-circled"></i>
+            <span>{{'views.label.cerrar'  | translate}}</span>
+        </a>
+    </header>
+    <h3 class="glossary-title">
+        {{'views.label.DimensionesMedidas'  | translate}}
+    </h3>
+    <div class="glossary-box">
+        <span id="glossary-search"><input ng-model="searchText" class="form-control" placeholder="{{'views.label.buscar'  | translate}}" /></span>
+        <div id="glossary-scroll">
+            <div class="glossary-item" ng-repeat="glossary in glossaryArr  | orderBy:'name' | filter:searchText track by $index">
+                <div class="glossary-item-name">
+                    <span>{{glossary.name}}</span>
+                    <p ng-if="glossary.descripcion">{{glossary.descripcion}}</p>
+                </div>
+                <div class="glossary-item-type">
+                    <span data-tipo="{{glossary.type}}">{{glossary.type}}</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

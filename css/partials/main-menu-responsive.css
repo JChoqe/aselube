@@ -1,0 +1,237 @@
+﻿#main-menu-responsive {
+    display:none;
+}
+@media only screen and (min-width : 320px) and (max-width : 1024px) {
+    #main-menu-responsive {
+        display: block;
+    }
+}
+
+#main-menu-responsive {
+    transition: all .3s ease 0s;
+    -webkit-overflow-scrolling: touch;
+}
+
+#main-menu-responsive {
+    position: absolute;
+    top: 70px;
+    bottom: 0px;
+    left: -290px;
+    width: 280px;
+    /*background: #141414 !important;*/
+    background: #38373d !important;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
+    z-index: 503;
+}
+
+#main-menu-responsive.active {
+    left: 0px;
+}
+
+#main-menu-responsive .scroll-menu {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+/*.list-nav-menu {
+    width:100%;
+    height:auto;
+}
+.list-nav-menu > li {
+    height: 40px;
+    background: #40464c;
+    background: -moz-linear-gradient(top, #40464c 0%, #383740 100%);
+    background: -webkit-linear-gradient(top, #40464c 0%,#383740 100%);
+    background: linear-gradient(to bottom, #40464c 0%,#383740 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40464c', endColorstr='#383740',GradientType=0 );
+    border-bottom: 1px solid #2b2b30;
+}
+.list-nav-menu > li > a {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    flex:1;
+    height:100%;    
+    color:#fff;
+    padding-left:20px;
+    text-decoration:none;
+    cursor:pointer;
+}*/
+/*.list-nav-menu > li > a > i{
+    font-size: 1.4rem;
+    margin-right:20px;
+}
+.list-nav-menu > li > a p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+    font-family: 'Roboto-Light', sans-serif;
+    letter-spacing: 0.8px;
+    font-weight: lighter;
+}*/
+#main-menu-responsive .scroll-menu .card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: transparent;
+    background-clip: border-box;
+    border: none;
+    border-radius: 0;
+}
+#main-menu-responsive .scroll-menu .card .card-header {
+    height: 40px;
+    background: #40464c;
+    background: -moz-linear-gradient(top, #40464c 0%, #383740 100%);
+    background: -webkit-linear-gradient(top, #40464c 0%,#383740 100%);
+    background: linear-gradient(to bottom, #40464c 0%,#383740 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40464c', endColorstr='#383740',GradientType=0 );
+    border: none;
+    border-bottom: 1px solid #2b2b30;
+    padding: 0px;
+    border-radius: 0 !important;
+}
+#main-menu-responsive .scroll-menu .card .card-header > a {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    color: #fff;
+    padding-left: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+#main-menu-responsive .scroll-menu .card .card-header > a > i {
+    font-size: 1.4rem;
+    margin-right: 20px;
+}
+
+#main-menu-responsive .scroll-menu .card .card-header > a p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+    font-family: 'Roboto-Light', sans-serif;
+    letter-spacing: 0.8px;
+    font-weight: lighter;
+    flex: 1;
+    justify-content: space-between;
+    display: flex;
+    padding-right: 15px;
+}
+#main-menu-responsive .scroll-menu .card .card-header > a p .caret {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+#main-menu-responsive .scroll-menu .card .card-body {
+    padding: 0;
+}
+#main-menu-responsive .scroll-menu .card .card-body .nav li{
+    width: 100%;
+    height: 30px;
+    background: #23242a;
+    background: -moz-linear-gradient(top, #23242a 0%, #22252a 100%);
+    background: -webkit-linear-gradient(top, #23242a 0%,#22252a 100%);
+    background: linear-gradient(to bottom, #23242a 0%,#22252a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23242a', endColorstr='#22252a',GradientType=0 );
+    border: none;
+    border-top: 1px solid #33393f;
+    border-bottom: 1px solid #111215;
+    padding: 0px;
+    border-radius: 0 !important;
+}
+#main-menu-responsive .scroll-menu .card .card-body .nav li:first-child {
+    border-top: none;
+}
+#main-menu-responsive .scroll-menu .card .card-body .nav li:last-child{
+    border-bottom: none;
+}
+
+#main-menu-responsive .scroll-menu .card .card-body .nav > li > a {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    color: #fff;
+    padding-left: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    justify-content: space-between;
+    padding-right: 15px;
+}
+#main-menu-responsive .scroll-menu .card .card-body .nav > li > a.no-link {
+    display:none;
+}
+
+#main-menu-responsive .scroll-menu .card .card-body .nav > li > a > i:not(.ico-moreMenu) {
+    display: none;
+}
+#main-menu-responsive .scroll-menu .card .card-body .nav > li > a > p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+    font-family: 'Roboto-Light', sans-serif;
+    letter-spacing: 0.8px;
+    font-weight: lighter;
+    flex: 1;
+    justify-content: space-between;
+    display: flex;
+    padding-right: 15px;
+}
+
+#main-menu-responsive .scroll-menu .card .card-body .nav li .subMenuVistas li {
+    width: 100%;
+    height: 35px;
+    background: #23242a;
+    background: -moz-linear-gradient(top, #23242a 0%, #22252a 100%);
+    background: -webkit-linear-gradient(top, #23242a 0%,#22252a 100%);
+    background: linear-gradient(to bottom, #23242a 0%,#22252a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23242a', endColorstr='#22252a',GradientType=0 );
+    border: none;
+    border-top: 1px solid #33393f;
+    border-bottom: 1px solid #111215;
+    padding: 0px;
+    border-radius: 0 !important;
+}
+#main-menu-responsive .scroll-menu .card .card-body .nav li .subMenuVistas li a {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    color: #fff;
+    padding-left: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    justify-content: space-between;
+    padding-right: 15px;
+}
+
+#main-menu-responsive .scroll-menu .card .card-body .nav li .subMenuVistas li:first-child {
+    border-top: none;
+}
+
+#main-menu-responsive .scroll-menu .card .card-body .nav li .subMenuVistas li:last-child {
+    border-bottom: none;
+}
+
+#main-menu-responsive .scroll-menu .card .card-body .nav li.activo_fijo {
+    background: #1e97cf;
+    background: -moz-linear-gradient(top, #1e97cf 0%, #1386b9 100%);
+    background: -webkit-linear-gradient(top, #1e97cf 0%,#1386b9 100%);
+    background: linear-gradient(to bottom, #1e97cf 0%,#1386b9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e97cf', endColorstr='#1386b9',GradientType=0 );
+}

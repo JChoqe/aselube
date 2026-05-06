@@ -1,0 +1,43 @@
+﻿<!--
+    Speeddial parámetros :
+    object-id : id del oBjeto
+    object-equalizer : muestra botón configuraciones true/false
+
+-->
+<!--
+ShowContextMenu parámetros'
+    1.- event
+    2.- id del objeto
+    3.- Ocultar botón vista de table
+    4.- Ocultar botón exportar excel
+    5.- No tiene Menú de exploración
+-->
+
+
+<div id="page-nav">
+    <div class="sc_menu clearfix">
+        <div id="box_ListaMenu">
+            <ul id="listaMenuContenidos" ng-include="'views/_Ventas/Automocion/_AutomocionMenu.html'"></ul>
+        </div>
+    </div>
+</div>
+<div id="box-current-selecctions">
+    <div style="width: 100%;" current-selections="app" class="CurrentSelections"></div>
+</div>
+<div class="row-page row m-0 p-0" id="page-container">
+    <div class="mzh-xl-15 mzh-lg-15 mzh-md-100 mzh-sm-100 mzh-xs-150 mzh-20 box_object_kpi" ng-include="'views/_Ventas/Automocion/_AutomocionKpi.html'"></div>
+
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 mzh-xl-85 mzh-lg-85 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-80 box_object">
+        <speeldial object-id="58801b3c-15d6-4c03-a3cc-6752b2e936e9" object-equalizer="true"></speeldial>
+        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'58801b3c-15d6-4c03-a3cc-6752b2e936e9')"></i></span>
+        <div class="qlik-embed hasDataView" id="58801b3c-15d6-4c03-a3cc-6752b2e936e9" data-qlik-objid="58801b3c-15d6-4c03-a3cc-6752b2e936e9" ng-right-click="ShowContextMenu($event,'58801b3c-15d6-4c03-a3cc-6752b2e936e9')"></div>
+    </div>
+
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 mzh-xl-85 mzh-lg-85 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-80 box_object">
+        <speeldial object-id="84193ae0-c0a7-4775-bbbe-fea97e1dc26a" object-equalizer="true"></speeldial>
+        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'84193ae0-c0a7-4775-bbbe-fea97e1dc26a')"></i></span>
+        <div class="qlik-embed hasDataView" id="84193ae0-c0a7-4775-bbbe-fea97e1dc26a" data-qlik-objid="84193ae0-c0a7-4775-bbbe-fea97e1dc26a" ng-right-click="ShowContextMenu($event,'84193ae0-c0a7-4775-bbbe-fea97e1dc26a')"></div>
+    </div>
+
+
+</div>

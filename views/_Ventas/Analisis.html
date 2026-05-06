@@ -1,0 +1,50 @@
+﻿<!--
+    Speeddial parámetros :
+    object-id : id del oBjeto
+    object-equalizer : muestra botón configuraciones true/false
+
+-->
+<!--
+ShowContextMenu parámetros'
+    1.- event
+    2.- id del objeto
+    3.- Ocultar botón vista de table
+    4.- Ocultar botón exportar excel
+    5.- No tiene Menú de exploración
+-->
+
+
+<div id="page-nav">
+    <div class="sc_menu clearfix">
+        <div id="box_ListaMenu">
+            <ul id="listaMenuContenidos" ng-include="'views/_Ventas/_VentasMenu.html'"></ul>
+        </div>
+    </div>
+</div>
+<div id="box-current-selecctions">
+    <div style="width: 100%;" current-selections="app" class="CurrentSelections"></div>
+</div>
+<div class="row-page row m-0 p-0" id="page-container">
+    <div class="mzh-xl-20 mzh-lg-40 mzh-md-50 mzh-sm-100 mzh-xs-150 mzh-20 box_object_kpi" ng-include="'views/_Ventas/_VentasKpi.html'"></div>
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 mzh-xl-80 mzh-lg-60 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-100 box_object">
+        <speeldial object-id="PCRQRc" object-equalizer="true"></speeldial>
+        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'PCRQRc')"></i></span>
+        <div class="qlik-embed hasDataView" id="PCRQRc" data-qlik-objid="PCRQRc" ng-right-click="ShowContextMenu($event,'PCRQRc')"></div>
+    </div>
+
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 mzh-xl-80 mzh-lg-60 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-100 box_object m-0 p-0">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mzh-xl-50 mzh-lg-50 mzh-md-50 mzh-sm-50 mzh-xs-50 mzh-50 box_object">
+            <speeldial object-id="fwsbTPk" object-equalizer="true"></speeldial>
+            <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'fwsbTPk')"></i></span>
+            <div class="qlik-embed hasDataView" id="fwsbTPk" data-qlik-objid="fwsbTPk" ng-right-click="ShowContextMenu($event,'fwsbTPk')"></div>
+        </div>
+
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mzh-xl-50 mzh-lg-50 mzh-md-50 mzh-sm-50 mzh-xs-50 mzh-50 box_object">
+            <speeldial object-id="ZCTxM" object-equalizer="true"></speeldial>
+            <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'ZCTxM')"></i></span>
+            <div class="qlik-embed hasDataView" id="ZCTxM" data-qlik-objid="ZCTxM" ng-right-click="ShowContextMenu($event,'ZCTxM')"></div>
+        </div>
+    </div>
+
+
+</div>

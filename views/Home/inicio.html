@@ -1,0 +1,283 @@
+﻿<div id="main-page" class="clearfix">
+    <options ng-if="demo" iddarkview="{{darkView}}"></options>
+    <header id="top-header">
+        <div id="logo-cliente">
+            <div id="logo-app">
+                <img src="assets/img/logos/logo-04.svg" />
+            </div>
+            <!--<img src="assets/img/logos/logo.png" class="logo-xl"/>-->
+            <img src="assets/img/logos/logo-04.svg" class="logo-xs" />
+        </div>
+
+
+        <div id="header-options">
+            <div class="mz-list-options" id="item-left">
+                <div class="item-option ico-menu-collapse">
+                    <a id="btn-collapse-sidebar" href="javascript:void(0)" ng-click="toogleSidebar()">
+                        <i class="icofont icofont-navigation-menu"></i>
+                    </a>
+                </div>
+
+                <div class="item-option ico-menu-hide">
+                    <a id="btn-collapse-sidebar" href="javascript:void(0)" ng-click="toogleMenu()">
+                        <i class="icofont icofont-navigation-menu"></i>
+                    </a>
+                </div>
+                <div class="item-option breadcrumb-trail">
+                    <span id="breadcrumb-trail" ng-bind-html="tituloSeccion"></span>
+                </div>
+
+            </div>
+            <div class="mz-list-options">
+                <div class="item-option">
+                    <bookmarks idapp="{{appID}}"></bookmarks>
+                </div>
+            </div>
+            <div class="mz-list-options">
+                <div class="item-option">
+                    <filters idfiltro="{{IdFiltros}}" isarray="{{isArray}}"></filters>
+                </div>
+            </div>
+            <div class="mz-list-options">
+                <div class="item-option">
+                    <glosario idapp="{{appID}}"></glosario>
+                </div>
+            </div>
+            <div class="mz-list-options">
+                <div class="item-option">
+                    <help></help>
+                </div>
+            </div>
+            <!--<div class="mz-list-options">
+                <div class="item-option">
+                    <switchlang idapp="{{appID}}"></switchlang>
+                </div>
+            </div>-->
+            <!-- Mode View -->
+            <!--<modeview></modeview>-->
+
+
+
+        </div>
+        <!--<div id="logo-app">
+            <img src="assets/img/logos/Titulo-app-b.png" />
+        </div>-->
+    </header>
+    <nav id="main-menu">
+        <div class="sidebar-wrapper" id="sidebar-wrapper">
+            <ul class="list-nav">
+                <li data-ui-sref-active="active">
+                    <a data-ui-sref="Home.inicio" href="javascript:void(0)">
+                        <i class="icofont icofont-ui-home"></i>
+                        <p>Home</p>
+                    </a>
+                </li>
+
+                <!-- Automoción -->
+                <li data-ui-sref="App.General.Dashboard.Dashboard" data-ui-sref-active="{'active': 'App.General.**'}">
+                    <a href="javascript:void(0)" data-parent="#sidebar-wrapper" data-toggle="collapse">
+                        <i class="icofont icofont-pixels"></i>
+                        <p>
+                            General
+                            <!--<b class="ico-accordion icofont icofont-caret-up"></b>-->
+                        </p>
+                    </a>
+                </li>
+
+                <!-- Proceso -->
+                <li data-ui-sref="App.Proceso.Dashboard.Dashboard" data-ui-sref-active="{'active': 'App.Proceso.**'}">
+
+                    <a href="javascript:void(0)" data-parent="#sidebar-wrapper" data-toggle="collapse" data-target="#menuProceso" aria-expanded="false">
+                        <i class="icofont icofont-loop"></i>
+                        <p>
+                            Proceso
+                            <!--<b class="ico-accordion icofont icofont-caret-up"></b>-->
+                        </p>
+                    </a>
+
+                    <!--<div class="collapse animation-transition-general" id="menuProceso" data-ui-sref-active="{'show': 'App.Ventas.**'}">
+            <ul class="nav">
+                <li ng-class="{active: ('App.Ventas.Dashboard' | includedByState)}">
+                    <a href="javascript:void(0)" data-ui-sref="App.Ventas.Dashboard">
+                        <span class="sidebar-mini-icon"><i class="icofont icofont-dashboard-web ico-14"></i></span>
+                        <span class="sidebar-normal"> Dashboard </span>
+                    </a>
+                </li>
+                <li ng-class="{active: ('App.Ventas.Analisis' | includedByState)}">
+                    <a href="javascript:void(0)" data-ui-sref="App.Ventas.Analisis">
+                        <span class="sidebar-mini-icon"><i class="icofont icofont-chart-pie ico-14"></i></span>
+                        <span class="sidebar-normal"> Análisis </span>
+                    </a>
+                </li>
+                <li ng-class="{active: ('App.Ventas.Informe' | includedByState)}">
+                    <a href="javascript:void(0)" data-ui-sref="App.Ventas.Informe">
+                        <span class="sidebar-mini-icon"><i class="icofont icofont-papers ico-14"></i></span>
+                        <span class="sidebar-normal"> Informe </span>
+                    </a>
+                </li>
+                <li ng-class="{active: ('App.Ventas.KPIS' | includedByState)}">
+                    <a href="javascript:void(0)" data-ui-sref="App.Ventas.KPIS">
+                        <span class="sidebar-mini-icon"><i class="icofont icofont-flag-alt-1 ico-14"></i></span>
+                        <span class="sidebar-normal"> KPI </span>
+                    </a>
+                </li>
+                <li ng-class="{active: ('App.Ventas.Reporting' | includedByState)}">
+                    <a href="javascript:void(0)" data-ui-sref="App.Ventas.Reporting">
+                        <span class="sidebar-mini-icon"><i class="icofont icofont-calculations ico-14"></i></span>
+                        <span class="sidebar-normal"> Reporting </span>
+                    </a>
+                </li>
+            </ul>
+        </div>-->
+                </li>
+
+                <!-- Automoción -->
+                <li data-ui-sref="App.Automocion.Dashboard.Dashboard" data-ui-sref-active="{'active': 'App.Automocion.**'}">
+                    <a href="javascript:void(0)" data-parent="#sidebar-wrapper" data-toggle="collapse">
+                        <i class="icofont icofont-automation"></i>
+                        <p>
+                            Automoción
+                            <!--<b class="ico-accordion icofont icofont-caret-up"></b>-->
+                        </p>
+                    </a>
+                </li>
+
+
+                <!-- Industriales -->
+                <li data-ui-sref="App.Industriales.Dashboard.Dashboard" data-ui-sref-active="{'active': 'App.Industriales.**'}">
+                    <a href="javascript:void(0)" data-parent="#sidebar-wrapper" data-toggle="collapse">
+                        <i class="icofont icofont-industries-2"></i>
+                        <p>
+                            Industriales
+                            <!--<b class="ico-accordion icofont icofont-caret-up"></b>-->
+                        </p>
+                    </a>
+                </li>
+
+
+                <!-- Marinos y Aviación -->
+                <li data-ui-sref="App.MarinosAviacion.Dashboard.Dashboard" data-ui-sref-active="{'active': 'App.MarinosAviacion.**'}">
+                    <a href="javascript:void(0)" data-parent="#sidebar-wrapper" data-toggle="collapse">
+                        <i class="icofont icofont-sea-plane"></i>
+                        <p>
+                            Marinos y Aviación
+                            <!--<b class="ico-accordion icofont icofont-caret-up"></b>-->
+                        </p>
+                    </a>
+                </li>
+
+
+                <!-- Grasas -->
+                <li data-ui-sref="App.Grasas.Dashboard.Dashboard" data-ui-sref-active="{'active': 'App.Grasas.**'}">
+                    <a href="javascript:void(0)" data-parent="#sidebar-wrapper" data-toggle="collapse">
+                        <i class="icofont icofont-water-drop"></i>
+                        <p>
+                            Grasas
+                            <!--<b class="ico-accordion icofont icofont-caret-up"></b>-->
+                        </p>
+                    </a>
+                </li>
+            </ul>
+
+            <img src="assets/img/logos/aselube-03-03.svg" class="logo-xl" />
+
+        </div>
+    </nav>
+
+
+
+    <nav id="main-menu-responsive" ng-class="ShowMenu == true ? 'active' : ''">
+        <div class="scroll-menu">
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header">
+                        <a data-ui-sref="Home.inicio" href="javascript:void(0)">
+                            <i class="icofont icofont-home"></i>
+                            <p>Home</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <a data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <i class="icofont icofont-dashboard-web"></i>
+                            <p>
+                                Ventas
+                                <b class="caret icofont icofont-caret-down"></b>
+                            </p>
+                        </a>
+                    </div>
+
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <ul class="nav" ng-include="'views/_Ventas/_VentasMenu.html'"></ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <a data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <i class="icofont icofont-dashboard-web"></i>
+                            <p>
+                                Bodegas
+                                <b class="caret icofont icofont-caret-down"></b>
+                            </p>
+                        </a>
+                    </div>
+
+                    <div id="collapseTwo" class="collapse" aria-labelledby="collapseTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            <ul class="nav" ng-include="'views/_Bodega/_BodegaMenu.html'"></ul>
+                        </div>
+                    </div>
+                </div>-->
+                <!--<div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Collapsible Group Item #2
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Collapsible Group Item #3
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+
+
+        </div>
+    </nav>
+    <main id="main-content">
+        <ui-view></ui-view>
+    </main>
+    <!-- Equalizador -->
+    <div id="box_equalizador" ng-controller="equalizadorCtrl" data-idObjetoEqualizador="" class="qui-dark">
+
+    </div>
+</div>
+
+
+
+
+
+
+
+

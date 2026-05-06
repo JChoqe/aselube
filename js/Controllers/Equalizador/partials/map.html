@@ -1,0 +1,257 @@
+﻿<div id="compileEquializador" ng-controller="mapCtrl" class="qv-soft-property-panel">
+    <div class="em-confirm-overlay" ng-if="hasChanged && applying">
+        <section>
+            <div class="lui-icon lui-icon--control"></div>
+            <p class="title">{{'equalizer.modal.cambios'  | translate}}</p>
+            <p>{{'equalizer.modal.cambiosexplicacion'  | translate}}</p>
+        </section>
+        <section class="panel-bottom">
+            <button lui-class-list="classList" ng-if="canSave" qva-activate="addPatches($event);" tid="apply" class="lui-button lui-button--inverse">{{'equalizer.btn.aplicar'  | translate}}</button>
+            <button lui-class-list="classList" qva-activate="cancelConfirm($event);" tid="cancel" class="lui-button lui-button--inverse">{{'equalizer.btn.cancelar'  | translate}}</button>
+        </section>
+    </div>
+    <div class="blockEquializador" ng-class="{'active' : blockEquializador == true}"></div>
+    <div id="box_contenido_equalizador">
+        <div id="header-equalizer">
+            <img src="./assets/img/logos/Titulo-Equilizer-001b.png" />
+        </div>
+        <div class="box_section_equializador accordion" id="acordion" role="tablist">
+            <!-- Capas -->
+            <div class="mzPanelEq panel">
+                <div class="col-lg-12" role="tab">
+                    <h4 class="em-section-header em-item" data-toggle="collapse" href="#collapseCapas" role="button" aria-expanded="true" aria-controls="collapseCapas">
+                        <span class="em-item-icon lui-icon lui-icon--"></span>
+                        <span class="em-text">{{'equalizer.label.capas'   | translate}}</span>
+                    </h4>
+                </div>
+                <div id="collapseCapas" class="collapse show" role="tabpanel" data-parent="#acordion">
+                    <div class="innerCollapse">
+                        <div class="mz-data">
+                            <div class="em-component">
+                                <ul class="em-list em-list-content">
+                                    <li ng-repeat="item in layersMapa" data-type="{{item.type}}">
+                                        <div class="em-item em-expandable em-layer-item-container" ng-click="expandLayer($event,item)" ng-class="{ 'expanded': item.expanded }">
+                                            <span class="lui-list__aside lui-icon" ng-class="item.expanded ? 'lui-icon--triangle-bottom': 'lui-icon--triangle-right'"></span>
+                                            <div class="em-layer-item-title-container">
+                                                <span class="em-layer-title-text" title="{{item.name}}">{{item.name}}</span>
+                                                <span class="em-layer-subtitle-text" title="{{item.tipo}}">{{item.tipo}}</span>
+                                            </div>
+                                        </div>
+                                        <div class="em-section-content" ng-show="item.expanded">
+                                            <div ng-include src="item.template"></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Configuraciones de Mapa -->
+            <div class="mzPanelEq panel">
+                <div class="col-lg-12" role="tab">
+                    <h4 class="em-section-header em-item" data-toggle="collapse" href="#collapseConfiguracion" role="button" aria-expanded="false" aria-controls="collapseConfiguracion">
+                        <span class="em-item-icon lui-icon lui-icon--map"></span>
+                        <span class="em-text">{{'equalizer.label.configuracionmapa' | translate}}</span>
+                    </h4>
+                </div>
+                <div id="collapseConfiguracion" class="collapse" role="tabpanel" data-parent="#acordion">
+                    <div class="innerCollapse">
+                        <div class="mz-data">
+                            <div class="em-component">
+                                <div class="em-item em-item-inner">{{'equalizer.label.mapabase' | translate}}</div>
+                                <div class="em-item em-item-inner em-radiobuttons-component">
+                                    <label class="lui-radiobutton  lui-radiobutton--inverse" tid="default" title="{{'equalizer.label.prederminado' | translate}}">
+                                        <input class="lui-radiobutton__input" type="radio" ng-model="baseMap" name="mapabase" value="default" ng-checked="baseMap" ng-click="changeBaseMap('default','default')">
+                                        <div class="lui-radiobutton__radio-wrap" qva-tabindex="0">
+                                            <span class="lui-radiobutton__radio"></span>
+                                            <span class="lui-radiobutton__radio-text">{{'equalizer.label.prederminado' | translate}}</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="em-item em-item-inner em-radiobuttons-component">
+                                    <label class="lui-radiobutton  lui-radiobutton--inverse" tid="pale" title="{{'equalizer.label.palido' | translate}}">
+                                        <input class="lui-radiobutton__input ng-pristine" type="radio" ng-model="baseMap" name="mapabase" value="pale" ng-checked="baseMap" ng-click="changeBaseMap('pale','pale_mercator')">
+                                        <div class="lui-radiobutton__radio-wrap" qva-tabindex="0">
+                                            <span class="lui-radiobutton__radio"></span>
+                                            <span class="lui-radiobutton__radio-text">{{'equalizer.label.palido' | translate}}</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="em-item em-item-inner em-radiobuttons-component">
+                                    <label class="lui-radiobutton  lui-radiobutton--inverse" tid="satellite" title="{{'equalizer.label.satelite' | translate}}">
+                                        <input class="lui-radiobutton__input" type="radio" ng-model="baseMap" name="mapabase" value="satellite" ng-checked="baseMap" ng-click="changeBaseMap('satellite','satellite_mercator')">
+                                        <div class="lui-radiobutton__radio-wrap" qva-tabindex="0">
+                                            <span class="lui-radiobutton__radio"></span>
+                                            <span class="lui-radiobutton__radio-text">{{'equalizer.label.satelite' | translate}}</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="em-item em-item-inner em-radiobuttons-component">
+                                    <label class="lui-radiobutton  lui-radiobutton--inverse" tid="empty" title="{{'equalizer.label.ninguna' | translate}}">
+                                        <input class="lui-radiobutton__input" type="radio" ng-model="baseMap" name="mapabase" value="empty" ng-checked="baseMap" ng-click="changeBaseMap('empty','emptydegreemercator')">
+                                        <div class="lui-radiobutton__radio-wrap" qva-tabindex="0">
+                                            <span class="lui-radiobutton__radio"></span>
+                                            <span class="lui-radiobutton__radio-text">{{'equalizer.label.ninguna' | translate}}</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="em-component">
+                                <div class="em-item em-item-inner">{{'equalizer.label.idiomamapa' | translate}}</div>
+                                <div class="em-item em-item-inner em-radiobuttons-component">
+                                    <label class="lui-radiobutton  lui-radiobutton--inverse" tid="auto" title="{{'equalizer.label.automatico' | translate}}">
+                                        <input class="lui-radiobutton__input" type="radio" ng-model="mapLanguage" name="mapLanguage" value="auto" ng-click="changeLanguage('auto')">
+                                        <div class="lui-radiobutton__radio-wrap" qva-tabindex="0">
+                                            <span class="lui-radiobutton__radio"></span>
+                                            <span class="lui-radiobutton__radio-text">{{'equalizer.label.automatico' | translate}}</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="em-item em-item-inner em-radiobuttons-component">
+                                    <label class="lui-radiobutton  lui-radiobutton--inverse" tid="english" title="{{'equalizer.label.ingles' | translate}}">
+                                        <input class="lui-radiobutton__input" type="radio" ng-model="mapLanguage" name="mapLanguage" value="english" ng-click="changeLanguage('english')">
+                                        <div class="lui-radiobutton__radio-wrap" qva-tabindex="0">
+                                            <span class="lui-radiobutton__radio"></span>
+                                            <span class="lui-radiobutton__radio-text">{{'equalizer.label.ingles' | translate}}</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="em-item em-item-inner em-radiobuttons-component">
+                                    <label class="lui-radiobutton  lui-radiobutton--inverse" tid="local" title="{{'equalizer.label.local' | translate}}">
+                                        <input class="lui-radiobutton__input" type="radio" ng-model="mapLanguage" name="mapLanguage" value="local" ng-click="changeLanguage('local')">
+                                        <div class="lui-radiobutton__radio-wrap" qva-tabindex="0">
+                                            <span class="lui-radiobutton__radio"></span>
+                                            <span class="lui-radiobutton__radio-text">{{'equalizer.label.local' | translate}}</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="em-component">
+                                <div class="em-item em-item-inner em-checkbox-component">
+                                    <div class="value">
+                                        <label class="lui-checkbox lui-checkbox--inverse">
+                                            <input class="lui-checkbox__input" type="checkbox" ng-model="zoomAutomatico" ng-click="changeZoom()" ng-checked="zoomAutomatico" id="zoomAutomatico">
+                                            <div class="lui-checkbox__check-wrap">
+                                                <span class="lui-checkbox__check"></span>
+                                                <span class="lui-checkbox__check-text label">{{'equalizer.label.zoomauto' | translate}}</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="em-component">
+                                <div class="em-switch-component border-bottom">
+                                    <div class="label" aria-disabled="false">
+                                        <div class="title">{{'equalizer.label.mostrarleyenda' | translate}}</div>
+                                        <div class="value" ng-if="showLegend">{{'equalizer.label.activado' | translate}}</div>
+                                        <div class="value" ng-if="!showLegend">{{'equalizer.label.desactivado' | translate}}</div>
+                                    </div>
+                                    <div lui-class-list="classList" class="lui-switch lui-switch--inverse">
+                                        <label class="lui-switch__label">
+                                            <input type="checkbox" ng-model="showLegend" class="lui-switch__checkbox " ng-change="changeLegend()" aria-invalid="false" id="showLegend">
+                                            <span class="lui-switch__wrap">
+                                                <span class="lui-switch__inner"></span>
+                                                <span class="lui-switch__switch"></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Titulos -->
+            <div class="mzPanelEq panel">
+                <div class="col-lg-12" role="tab">
+                    <h4 class="em-section-header em-item" data-toggle="collapse" href="#collapseTitulos" role="button" aria-expanded="false" aria-controls="collapseTitulos">
+                        <span class="em-item-icon lui-icon lui-icon--edit"></span>
+                        <span class="em-text">{{'equalizer.label.titulos' | translate}}</span>
+                    </h4>
+                </div>
+                <div id="collapseTitulos" class="collapse" role="tabpanel" data-parent="#acordion">
+                    <div class="innerCollapse">
+                        <div class="em-component em-data-component em-list-component">
+                            <div class="em-list-container">
+                                <!--Titulos-->
+                                <div class="col-lg-12 border-bottom">
+                                    <div class="em-switch-component">
+                                        <div class="label ">
+                                            <div class="title">{{'equalizer.label.mostrartitulo' | translate}}</div>
+                                            <div class="value">{{titulosLabel}}</div>
+                                        </div>
+                                        <div class="lui-switch">
+                                            <label class="lui-switch__label" for="showTitles">
+                                                <input type="checkbox" ng-model="showTitles" class="lui-switch__checkbox" aria-label="Label" id="showTitles" ng-change="changeShowTitles($event, showTitles)" ng-checked="showTitles" />
+                                                <span class="lui-switch__wrap">
+                                                    <span class="lui-switch__inner"></span>
+                                                    <span class="lui-switch__switch"></span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="em-data" tid="titulos" ng-if="showTitles">
+                                    <div class="em-item em-item-inner">
+                                        <label class="lui-label">{{'equalizer.label.titulo' | translate}}</label>
+                                        <input class="lui-input lui-input--inverse" ng-model-options="{ updateOn: 'blur', allowInvalid: true }" ng-model="titleObject" id="titleObject" name="titleObject" ng-change="changeTitle(titleObject)" />
+                                    </div>
+                                    <div class="em-item em-item-inner">
+                                        <label class="lui-label">{{'equalizer.label.subtitulo' | translate}}</label>
+                                        <input class="lui-input lui-input--inverse" ng-model-options="{ updateOn: 'blur', allowInvalid: true }" ng-model="subTitleObject" id="subTitleObject" name="subTitleObject" ng-change="changeSubTitle(subTitleObject)" />
+                                    </div>
+                                    <div class="em-item em-item-inner">
+                                        <label class="lui-label">{{'equalizer.label.piepagina' | translate}}</label>
+                                        <input class="lui-input lui-input--inverse" ng-model-options="{ updateOn: 'blur', allowInvalid: true }" ng-model="footnoteObject" id="footnoteObject" name="footnoteObject" ng-change="changeFootnote(footnoteObject)" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filtros -->
+            <filtersEqualizador></filtersEqualizador>
+
+        </div>
+    </div>
+    <div id="box_action_equalizador">
+        <button ng-click="closeEqualizador($event)" class="cerrar">
+            <span>{{'equalizer.btn.cerrar' | translate}}</span>
+        </button>
+        <button ng-click="clearPatches($event)" ng-disabled="checkPatches()">
+            <span>{{'equalizer.btn.descartar' | translate}}</span>
+        </button>
+        <button ng-if="canSave" ng-click="IsApplying($event)" ng-disabled="checkPatches()">
+            <span>{{'equalizer.btn.aplicar' | translate}}</span>
+        </button>
+    </div>
+
+
+    <div class="modal" tabindex="-1" role="dialog" id="modalDlg" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-title">{{"equalizer.modal.atencion" | translate}}</span>
+                </div>
+                <div class="modal-body">
+                    <strong ng-if="$scope.canSave"> <span>{{"equalizer.modal.aviso" | translate}}</span></strong>
+                    <strong ng-if="!$scope.canSave"> <span>{{"equalizer.modal.avisoClose" | translate}}</span></strong>
+                </div>
+                <div class="modal-footer">
+                    <button ng-if="canSave" class="lui-button  lui-dialog__button" ng-click="IsApplying($event)">{{'equalizer.btn.guardar' | translate}}</button>
+                    <button class="lui-button  lui-dialog__button" data-dismiss="modal" ng-click="clearPatchesModal($event)">{{'equalizer.btn.descartar' | translate}}</button>
+                    <button class="lui-button  lui-dialog__button" data-dismiss="modal">{{'equalizer.btn.cerrar' | translate}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

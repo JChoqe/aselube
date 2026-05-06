@@ -1,0 +1,58 @@
+﻿<!--
+    Speeddial parámetros :
+    object-id : id del oBjeto
+    object-equalizer : muestra botón configuraciones true/false
+
+-->
+<!--
+ShowContextMenu parámetros'
+    1.- event
+    2.- id del objeto
+    3.- Ocultar botón vista de table
+    4.- Ocultar botón exportar excel
+    5.- No tiene Menú de exploración
+-->
+
+
+<div id="page-nav">
+    <div class="sc_menu clearfix">
+        <div id="box_ListaMenu">
+            <ul id="listaMenuContenidos" ng-include="'views/_Ventas/MarinosAviacion/_MarinosAviacionMenu.html'"></ul>
+        </div>
+    </div>
+</div>
+<div id="box-current-selecctions">
+    <div style="width: 100%;" current-selections="app" class="CurrentSelections"></div>
+</div>
+<div class="row-page row m-0 p-0" id="page-container">
+    <div class="mzh-xl-15 mzh-lg-15 mzh-md-100 mzh-sm-100 mzh-xs-150 mzh-20 box_object_kpi" ng-include="'views/_Ventas/MarinosAviacion/_MarinosAviacionKpi.html'"></div>
+
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mzh-xl-45 mzh-lg-45 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-80 box_object">
+        <speeldial object-id="6e9ea418-5f75-4d27-b164-98f233c062b9" object-equalizer="true"></speeldial>
+        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'6e9ea418-5f75-4d27-b164-98f233c062b9')"></i></span>
+        <div class="qlik-embed hasDataView" id="6e9ea418-5f75-4d27-b164-98f233c062b9" data-qlik-objid="6e9ea418-5f75-4d27-b164-98f233c062b9" ng-right-click="ShowContextMenu($event,'6e9ea418-5f75-4d27-b164-98f233c062b9')"></div>
+    </div>
+
+    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 mzh-xl-40 mzh-lg-40 mzh-md-50 mzh-sm-50 mzh-xs-100 mzh-40 box_object">
+        <speeldial object-id="1656ea1f-13c3-4863-a01c-b6ba1b81b899" object-equalizer="true"></speeldial>
+        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'1656ea1f-13c3-4863-a01c-b6ba1b81b899')"></i></span>
+        <div class="qlik-embed hasDataView" id="1656ea1f-13c3-4863-a01c-b6ba1b81b899" data-qlik-objid="1656ea1f-13c3-4863-a01c-b6ba1b81b899" ng-right-click="ShowContextMenu($event,'1656ea1f-13c3-4863-a01c-b6ba1b81b899')"></div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 mzh-xl-40 mzh-lg-40 mzh-md-50 mzh-sm-50 mzh-xs-100 mzh-40 box_object">
+        <speeldial object-id="af9e72c2-80fd-4cd4-b4e7-e4106bea891c" object-equalizer="true"></speeldial>
+        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'af9e72c2-80fd-4cd4-b4e7-e4106bea891c')"></i></span>
+        <div class="qlik-embed hasDataView" id="af9e72c2-80fd-4cd4-b4e7-e4106bea891c" data-qlik-objid="af9e72c2-80fd-4cd4-b4e7-e4106bea891c" ng-right-click="ShowContextMenu($event,'af9e72c2-80fd-4cd4-b4e7-e4106bea891c')"></div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 mzh-xl-40 mzh-lg-40 mzh-md-50 mzh-sm-50 mzh-xs-100 mzh-40 box_object">
+        <speeldial object-id="cc1a9e4a-2706-4d3a-bdf5-8f83748a7ed4" object-equalizer="true"></speeldial>
+        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'cc1a9e4a-2706-4d3a-bdf5-8f83748a7ed4')"></i></span>
+        <div class="qlik-embed hasDataView" id="cc1a9e4a-2706-4d3a-bdf5-8f83748a7ed4" data-qlik-objid="cc1a9e4a-2706-4d3a-bdf5-8f83748a7ed4" ng-right-click="ShowContextMenu($event,'cc1a9e4a-2706-4d3a-bdf5-8f83748a7ed4')"></div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 mzh-xl-40 mzh-lg-40 mzh-md-50 mzh-sm-50 mzh-xs-100 mzh-40 box_object">
+        <speeldial object-id="9863c1ca-93b7-4197-ba6a-1bcfb309f485" object-equalizer="true"></speeldial>
+        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'9863c1ca-93b7-4197-ba6a-1bcfb309f485')"></i></span>
+        <div class="qlik-embed hasDataView" id="9863c1ca-93b7-4197-ba6a-1bcfb309f485" data-qlik-objid="9863c1ca-93b7-4197-ba6a-1bcfb309f485" ng-right-click="ShowContextMenu($event,'9863c1ca-93b7-4197-ba6a-1bcfb309f485')"></div>
+    </div>
+
+
+</div>

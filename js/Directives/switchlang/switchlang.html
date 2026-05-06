@@ -1,0 +1,15 @@
+﻿<div class="switch-lang item-header-options" data-app="{{dataApp}}" ng-if="multilanguage">
+    <div class="title-option">
+        <span class="txt-xs"><span class="icofont icofont-globe qs-no-margin" aria-hidden="true"></span></span>
+        <div class="current-lang txt-xl">
+            <span class="lang-text">{{result[0].lang}}</span>
+        </div>
+    </div>
+    <div class="lang-dropdown">
+        <div class="selecting-lang" ng-repeat="item in langs" ng-click="activeLang(item)" ng-class="{'active': item.active}">
+            <span class="lang-text">{{item.lang}}</span>
+            <i class="lui-icon lui-icon--tick" ng-if="item.active"></i>
+        </div>
+    </div>
+</div>
+

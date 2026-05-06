@@ -1,0 +1,96 @@
+﻿<div class="mz-settings" ng-class="OpenOptions == true ? 'show' : ''">
+    <a id="mz-settings" href="" class="mz-settings-link" ng-click="toogleOptions()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+    </a>
+    <div class="mz-settings-body">
+        <div class="mt-2 mb-4">
+            <img src="assets/img/logos/logo-app-001a.png" class="img-fluid pt-1 pb-1 pl-5 pr-5" />
+            <span class="tx-sans">{{'template.label.template'  | translate}}</span>
+        </div>
+        <div class="tab-view-wrapper">
+            <lui-tab-view id="lui-tabview">
+                <lui-tabset>
+                    <lui-tab ref="tab1" ng-class="darkView == true ? 'lui-active' : 'lui-disabled'"><span class="tab-item"><span class="lui-icon lui-icon--image"></span></span></lui-tab>
+                    <lui-tab ref="tab2"><span class="tab-item"><span class="lui-icon lui-icon--palette"></span></span></lui-tab>
+                    <lui-tab ref="tab3"><span class="tab-item"><span class="lui-icon lui-icon--toggle-left"></span></span></lui-tab>
+                    <lui-tab ref="tab4"><span class="tab-item"><span class="lui-icon lui-icon--application"></span></span></lui-tab>
+                    <lui-tab ref="tab5"><span class="tab-item"><span class="lui-icon lui-icon--sync"></span></span></lui-tab>
+                    <lui-tab ref="tab6"><span class="tab-item"><span class="lui-icon lui-icon--save"></span></span></lui-tab>
+                </lui-tabset>
+                <lui-tab-content class="tabs-content" ref="tab1" ng-if="darkView">
+                    <h3 class="tituloList mb-1 tx-sans text-left">{{'template.label.backgroundimage'  | translate}}</h3>
+                    <div class="themecolors">
+                        <a ng-click="activeItem($event)" ng-repeat="imagen in imagenesBG" href="javascript:void(0)" class="themes__item" theme="{{imagen.nombre}}" data-background-image="{{imagen.nombre}}" data-sa-value="{{$index + 1}}">
+                            <img src="{{imagen.url}}" altenative="{{imagen.nombre}}" />
+                        </a>
+                    </div>
+                </lui-tab-content>
+                <lui-tab-content class="tabs-content" ref="tab2">
+                    <h3 class="tituloList mb-1 tx-sans text-left">{{'template.label.themes'  | translate}}</h3>
+                    <select class="lui-select cmbThemes" id="cmbThemes" ng-model="selecteTheme" ng-options="theme.id for theme in listTheme track by theme.id" ng-change="applyTheme(selecteTheme)"></select>
+                </lui-tab-content>
+
+                <lui-tab-content class="tabs-content" ref="tab3">
+                    <h3 class="tituloList mb-1 tx-sans text-left">{{'template.label.sidebarimages'  | translate}}</h3>
+                    <ul class="themecolors listaBgImage">
+                        <li class="sidebar-item" ng-repeat="image in sidebarImages" ng-click="getBgSidebarImage($event)" data-sa-value="{{$index + 1}}">
+                            <div class="coverSidebarImageList"></div>
+                            <a href="javascript:void(0)" title="{{image.nombre | uppercase}}" style="background-image:url({{image.url}})"></a>
+                        </li>
+                    </ul>
+                    <h3 class="tituloList mb-1 tx-sans text-left">{{'template.label.sidebarcolor'  | translate}}</h3>
+                    <ul class="themecolors listaBg">
+                        <li class="sidebar-item-color" ng-repeat="color in colors" ng-click="getSidebarColor($event)" data-sa-value="{{$index + 1}}">
+                            <a href="javascript:void(0)" theme="{{color.nombre}}" title="{{color.nombre | uppercase}}" data-background-color="{{color.color}}" style="background-color:{{color.color}}"></a>
+                        </li>
+                    </ul>
+                    <h3 class="tituloList mb-1 tx-sans text-left">{{'template.label.menucolor'  | translate}}</h3>
+                    <ul class="themecolors listaBg">
+                        <li class="sidebar-item-menu-color" ng-repeat="color in colors" ng-click="getMenuColor($event)" data-sa-value="{{$index + 1}}">
+                            <a href="javascript:void(0)" theme="{{color.nombre}}" title="{{color.nombre | uppercase}}" data-background-color="{{color.color}}" style="background-color:{{color.color}}"></a>
+                        </li>
+                    </ul>
+                </lui-tab-content>
+                <lui-tab-content class="tabs-content" ref="tab4">
+                    <h3 class="tituloList mb-1 tx-sans text-left">{{'template.label.headercolor'  | translate}}</h3>
+                    <ul class="themecolors listaBg">
+                        <li class="header-item-color" ng-repeat="color in colors" ng-click="getBgHeader($event)" data-sa-value="{{$index + 1}}">
+                            <a href="javascript:void(0)" theme="{{color.nombre}}" title="{{color.nombre | uppercase}}" data-background-color="{{color.color}}" style="background-color:{{color.color}}"></a>
+                        </li>
+                        <!--<li class="liColor"><div class="colorSelector" id="colorSelector"><div></div></div></li>-->
+                    </ul>
+                </lui-tab-content>
+                <lui-tab-content class="tabs-content" ref="tab5">
+                    <h3 class="tituloList mb-1 tx-sans text-left">Reset</h3>
+                    <button ng-if="darkView" class="lui-button" id="resetBackgroundimage" ng-click="resetBackgroundimage()">{{'template.label.backgroundimage'  | translate}}</button>
+                    <div ng-if="darkView" class="clearfix mt-1"></div>
+                    <button class="lui-button" id="resetThemes" ng-click="resetThemes()">{{'template.label.themes'  | translate}}</button>
+                    <div class="clearfix mt-1"></div>
+                    <button class="lui-button" id="resetSidebarimages" ng-click="resetSidebarimages()">{{'template.label.sidebarimages'  | translate}}</button>
+                    <div class="clearfix mt-1"></div>
+                    <button class="lui-button" id="resetSidebarcolor" ng-click="resetSidebarcolor()">{{'template.label.sidebarcolor'  | translate}}</button>
+                    <div class="clearfix mt-1"></div>
+                    <button class="lui-button" id="resetSidebarMenucolor" ng-click="resetSidebarMenucolor()">{{'template.label.menucolor'  | translate}}</button>
+                    <div class="clearfix mt-1"></div>
+                    <button class="lui-button" id="resetHeadercolor" ng-click="resetHeadercolor()">{{'template.label.headercolor'  | translate}}</button>                    
+                </lui-tab-content>
+                <lui-tab-content class="tabs-content" ref="tab6">
+                    <h3 class="tituloList mb-1 tx-sans text-left">{{'template.label.saveconfig'  | translate}}</h3>
+                    <div class="clearfix mt-1"></div>
+                    <label class="lui-label">{{'template.label.cliente'  | translate}}</label>
+                    <input class="lui-input" id="cliente_name" />
+                    <div class="clearfix mt-1"></div>
+                    <label class="lui-label">{{'template.label.proyecto'  | translate}}</label>
+                    <input class="lui-input" id="proyecto_name" />
+                    <div class="clearfix mt-1"></div>
+                    <button class="lui-button lui-button--gradient  lui-active" ng-click="saveConfig()" ng-disabled="isConfigDisabled()">{{'template.label.saveconfig'  | translate}}</button>
+                </lui-tab-content>
+
+            </lui-tab-view>
+        </div>
+
+
+
+
+    </div>
+</div>
