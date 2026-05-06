@@ -1,9 +1,8 @@
-﻿
-define([
+﻿define([
     'app',
-    './routerGeneral',
-    './routerProceso',
-    './routerAutomocion'
+    './routerQuandox',
+    './routerInformeTitularidad',
+    './routerINE'
 
 ], function (app) {
     app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$compileProvider', '$translateProvider', 'InitConfigProvider', function ($stateProvider, $urlRouterProvider, $locationProvider, $compileProvider, $translateProvider, InitConfigProvider) {
@@ -14,7 +13,6 @@ define([
         $translateProvider.useSanitizeValueStrategy('escape');
         $locationProvider.hashPrefix('');
         $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|javascript):/);
-
 
         $urlRouterProvider.otherwise("/home");
 
@@ -35,7 +33,7 @@ define([
             })
 
             /*Secciones Generales*/
-            .state('App.Proceso', {
+            .state('App.InformeTitularidad', {
                 template: "<ui-view></ui-view>",
                 controller: 'StateParentCtrl',
                 //params: {
@@ -68,7 +66,7 @@ define([
                 },
             })
 
-            .state('App.General', {
+            .state('App.Quandox', {
                 template: "<ui-view></ui-view>",
                 controller: 'StateParentCtrl',
                 //params: {
@@ -101,40 +99,7 @@ define([
                 },
             })
 
-            .state('App.Automocion', {
-                template: "<ui-view></ui-view>",
-                controller: 'StateParentCtrl',
-                //params: {
-                //    IDFILTRO: ["aKdBfMd", "ebSLam"]
-                //},
-
-                params: {
-                    IDFILTRO: {
-                        array: true,
-                        value: [
-                            {
-                                title: 'Tiempo',
-                                icon: 'icofont icofont-checked',
-                                idFiltro: 'aKdBfMd'
-                            },
-                            {
-                                title: 'Otros',
-                                icon: 'icofont icofont-quote-left',
-                                idFiltro: 'ebSLam'
-                            }
-                        ]
-                    },
-                    isThisArray: true
-                },
-
-                resolve: {
-                    dataApp: function (getAppService, InitConfig) {
-                        return getAppService.getDataApp(InitConfig.appVentas); //.$promise;
-                    }
-                },
-            })
-            //**************************************
-            .state('App.Ventas', {
+            .state('App.INE', {
                 template: "<ui-view></ui-view>",
                 controller: 'StateParentCtrl',
                 //params: {
@@ -170,6 +135,3 @@ define([
     }]);
 
 });
-
-
-

@@ -1,0 +1,33 @@
+﻿<!--
+    Speeddial parámetros :
+    object-id : id del oBjeto
+    object-equalizer : muestra botón configuraciones true/false
+
+-->
+<!--
+ShowContextMenu parámetros'
+    1.- event
+    2.- id del objeto
+    3.- Ocultar botón vista de table
+    4.- Ocultar botón exportar excel
+    5.- No tiene Menú de exploración
+-->
+
+
+<div id="page-nav">
+    <div class="sc_menu clearfix">
+        <div id="box_ListaMenu">
+            <ul id="listaMenuContenidos" ng-include="'views/_Ventas/InformeTitularidad/_InformeTitularidadMenu.html'"></ul>
+        </div>
+    </div>
+</div>
+<div id="box-current-selecctions">
+    <div style="width: 100%;" current-selections="app" class="CurrentSelections"></div>
+</div>
+<div class="row-page row m-0 p-0" id="page-container">
+    <!-- Genaro-->
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mzh-xl-100 mzh-lg-100 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-100 box_object">
+        <speeldial object-id="NDzagU" object-equalizer="false"></speeldial>
+        <div class="qlik-embed mz-genaro-box" id="NDzagU" data-qlik-objid="NDzagU"></div>
+    </div>
+</div>

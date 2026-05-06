@@ -1,0 +1,119 @@
+﻿<!--
+    Speeddial parámetros :
+    object-id : id del oBjeto
+    object-equalizer : muestra botón configuraciones true/false
+
+-->
+<!--
+ShowContextMenu parámetros'
+    1.- event
+    2.- id del objeto
+    3.- Ocultar botón vista de table
+    4.- Ocultar botón exportar excel
+    5.- No tiene Menú de exploración
+-->
+
+
+<div id="page-nav">
+    <div class="sc_menu clearfix">
+        <div id="box_ListaMenu">
+            <ul id="listaMenuContenidos" ng-include="'views/_Ventas/InformeTitularidad/_InformeTitularidadMenu.html'"></ul>
+        </div>
+    </div>
+</div>
+<div id="box-current-selecctions">
+    <div style="width: 100%;" current-selections="app" class="CurrentSelections"></div>
+</div>
+<div class="row-page row m-0 p-0" id="page-container">
+    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mzh-xl-50 mzh-lg-50 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-50 box_object box_mix_object">
+        <speeldial object-id="GcUgaUD" object-equalizer="true"></speeldial>
+        <div class="box_mix">
+            <div class="box_object_inner_kpi mzh-xl-30 mzh-lg-30 mzh-md-40 mzh-sm-40 mzh-xs-50 mzh-30 hoja-KPI">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mzh-xl-100 mzh-lg-100 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-100 item-inner-kpi">
+                    <div class="qlik-embed qlik-embed-kpi" data-qlik-objid="bTjrWs"></div>
+                </div>
+            </div>
+            <div class="box_object_inner_grafico mzh-xl-70 mzh-lg-70 mzh-md-60 mzh-sm-60 mzh-xs-50 mzh-70 hoja-KPIgrafico" data-bottom="GcUgaUD">
+                <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'GcUgaUD')"></i></span>
+                <div class="qlik-embed hasDataView" id="GcUgaUD" data-qlik-objid="GcUgaUD" ng-right-click="ShowContextMenu($event,'GcUgaUD')"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mzh-xl-50 mzh-lg-50 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-50 box_object box_mix_object">
+        <speeldial object-id="AaLkNt" object-equalizer="true"></speeldial>
+        <div class="box_mix">
+            <div class="box_object_inner_kpi mzh-xl-30 mzh-lg-30 mzh-md-40 mzh-sm-40 mzh-xs-50 mzh-30 hoja-KPI">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mzh-xl-100 mzh-lg-100 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-100 item-inner-kpi">
+                    <div class="qlik-embed qlik-embed-kpi" data-qlik-objid="0c362514-d572-4b8f-9f6a-0d9891a88c2f"></div>
+                </div>
+            </div>
+            <div class="box_object_inner_grafico mzh-xl-70 mzh-lg-70 mzh-md-60 mzh-sm-60 mzh-xs-50 mzh-70 hoja-KPIgrafico" data-bottom="AaLkNt">
+                <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'AaLkNt')"></i></span>
+                <div class="qlik-embed hasDataView" id="AaLkNt" data-qlik-objid="AaLkNt" ng-right-click="ShowContextMenu($event,'AaLkNt')"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mzh-xl-50 mzh-lg-50 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-50 box_object box_mix_object">
+        <speeldial object-id="knjPu" object-equalizer="true"></speeldial>
+        <div class="box_mix">
+            <div class="box_object_inner_kpi mzh-xl-30 mzh-lg-30 mzh-md-40 mzh-sm-40 mzh-xs-50 mzh-30 hoja-KPI">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mzh-xl-100 mzh-lg-100 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-100 item-inner-kpi">
+                    <div class="qlik-embed qlik-embed-kpi" data-qlik-objid="3026ac59-1aa4-4128-ae12-b12ac4aef5ae"></div>
+                </div>
+            </div>
+            <div class="box_object_inner_grafico mzh-xl-70 mzh-lg-70 mzh-md-60 mzh-sm-60 mzh-xs-50 mzh-70 hoja-KPIgrafico" data-bottom="knjPu">
+                <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'knjPu')"></i></span>
+                <div class="qlik-embed hasDataView" id="knjPu" data-qlik-objid="knjPu" ng-right-click="ShowContextMenu($event,'knjPu')"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mzh-xl-50 mzh-lg-50 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-50 box_object box_mix_object">
+        <speeldial object-id="ALeEP" object-equalizer="true"></speeldial>
+        <div class="box_mix">
+            <div class="box_object_inner_kpi mzh-xl-30 mzh-lg-30 mzh-md-40 mzh-sm-40 mzh-xs-50 mzh-30 hoja-KPI">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mzh-xl-100 mzh-lg-100 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-100 item-inner-kpi">
+                    <div class="qlik-embed qlik-embed-kpi" data-qlik-objid="a3c8f1ad-49ac-4702-885e-456154d05118"></div>
+                </div>
+            </div>
+            <div class="box_object_inner_grafico mzh-xl-70 mzh-lg-70 mzh-md-60 mzh-sm-60 mzh-xs-50 mzh-70 hoja-KPIgrafico" data-bottom="ALeEP">
+                <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'ALeEP')"></i></span>
+                <div class="qlik-embed hasDataView" id="ALeEP" data-qlik-objid="ALeEP" ng-right-click="ShowContextMenu($event,'ALeEP')"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mzh-xl-50 mzh-lg-50 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-50 box_object box_mix_object">
+        <speeldial object-id="ALeEP" object-equalizer="true"></speeldial>
+        <div class="box_mix">
+            <div class="box_object_inner_kpi mzh-xl-30 mzh-lg-30 mzh-md-40 mzh-sm-40 mzh-xs-50 mzh-30 hoja-KPI">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mzh-xl-100 mzh-lg-100 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-100 item-inner-kpi">
+                    <div class="qlik-embed qlik-embed-kpi" data-qlik-objid="f516281a-ba34-4cb3-b6f3-6b6937e20f8d"></div>
+                </div>
+            </div>
+            <div class="box_object_inner_grafico mzh-xl-70 mzh-lg-70 mzh-md-60 mzh-sm-60 mzh-xs-50 mzh-70 hoja-KPIgrafico" data-bottom="ALeEP">
+                <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'ALeEP')"></i></span>
+                <div class="qlik-embed hasDataView" id="ALeEP" data-qlik-objid="ALeEP" ng-right-click="ShowContextMenu($event,'ALeEP')"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mzh-xl-50 mzh-lg-50 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-50 box_object box_mix_object">
+        <speeldial object-id="eJUJWwz" object-equalizer="true"></speeldial>
+        <div class="box_mix">
+            <div class="box_object_inner_kpi mzh-xl-30 mzh-lg-30 mzh-md-40 mzh-sm-40 mzh-xs-50 mzh-30 hoja-KPI">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 mzh-xl-100 mzh-lg-100 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-100 item-inner-kpi">
+                    <div class="qlik-embed qlik-embed-kpi" data-qlik-objid="fe4cbf52-804c-4f26-bfb7-8776dc14aa75"></div>
+                </div>
+            </div>
+            <div class="box_object_inner_grafico mzh-xl-70 mzh-lg-70 mzh-md-60 mzh-sm-60 mzh-xs-50 mzh-70 hoja-KPIgrafico" data-bottom="eJUJWwz">
+                <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'eJUJWwz')"></i></span>
+                <div class="qlik-embed hasDataView" id="eJUJWwz" data-qlik-objid="eJUJWwz" ng-right-click="ShowContextMenu($event,'eJUJWwz')"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
