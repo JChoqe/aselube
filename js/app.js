@@ -1,18 +1,17 @@
 /****************************************************************************************************************************************
-Obtener el host de la extensión, por ejemplo, en localhost:4848/extensions/NombreExtension/Pagina.html
+Obtener el host de la extensiï¿½n, por ejemplo, en localhost:4848/extensions/NombreExtension/Pagina.html
 se obtiene /extensions/NombreExtension/
 /***************************************************************************************************************************************/
 var href = window.location.pathname;
 var dir = href.substring(0, href.lastIndexOf('/')) + "/";
-
 
 function getURLParameter(a) {
     return (RegExp(a + "=(.+?)(&|$)").exec(location.search) || [null, null])[1]
 }
 
 define([
-	'js/qlik',
-	'angular',
+    'js/qlik',
+    'angular',
     'uiRouter',
     dir + "js/site.js",
     dir + "include/angular-ui/angular-cookies.min.js",
@@ -24,16 +23,13 @@ define([
     dir + "include/angular-translate/traducciones_fr.js",
     dir + "include/angular-translate/angular-translate.min.js",
 
-
 ], function (qlik, angular) {
-    qlik.on("error", function (error) {        
+    qlik.on("error", function (error) {
         console.log(error.message);
     },
-    function (warning) {
-        windows.console.log(warning);
-    });        
-
-   
+        function (warning) {
+            windows.console.log(warning);
+        });
 
     var app = angular.module('qlik-mashup', [
         'ui.router',
@@ -43,25 +39,22 @@ define([
         'ngTouch',
         'pascalprecht.translate'
     ]);
-		
-	app.directive('currentSelections', function($filter){
-		return {
-			restrict: "A",
-			
-			scope: {
-				currentSelections : '='
-			},
-			
-			link: function(scope, element, attrs) {				
-				scope.$watch('currentSelections', function (newValue, oldValue) {
-					if(typeof scope.currentSelections != 'undefined') {
-						scope.currentSelections.getObject(element, 'CurrentSelections');
-					}
-				});
-				
-			}
-		}
-    });           
+
+    app.directive('currentSelections', function ($filter) {
+        return {
+            restrict: "A",
+            scope: {
+                currentSelections: '='
+            },
+            link: function (scope, element, attrs) {
+                scope.$watch('currentSelections', function (newValue, oldValue) {
+                    if (typeof scope.currentSelections != 'undefined') {
+                        scope.currentSelections.getObject(element, 'CurrentSelections');
+                    }
+                });
+            }
+        }
+    });
     app.directive('cloneobject', ['$timeout', '$compile', '$rootScope', function ($timeout, $compile, $rootScope) {
         return {
             restrict: 'E',
@@ -69,10 +62,10 @@ define([
             template: '<div class="object-clone" object-id="{{ObjectId}}"></div>',
             link: function (scope, element, attrs) {
                 scope.appID = $rootScope.apiKey;
-                scope.app = qlik.openApp(scope.appID, config);                
+                scope.app = qlik.openApp(scope.appID, config);
                 scope.ObjectId = attrs.objectId;
                 element.addClass('containerCloneObject');
-                scope.div = element;                
+                scope.div = element;
                 scope.app.getObject(scope.div, scope.ObjectId);
             } //DOM manipulation
         }
@@ -124,14 +117,13 @@ define([
                     APPQLIK.getObject($CurrentSelections, 'CurrentSelections');
                     $('.qv-global-selections').parent('div').remove();
                 }, 600);
-                
             }
         }
     });
     app.run(function ($rootScope, InitConfig) {
         qlik.setLanguage(InitConfig.language);
-        //Destruimos los objetos en cada cambio de página  
-        $rootScope.$on("$stateChangeStart", function () {           
+        //Destruimos los objetos en cada cambio de pï¿½gina  
+        $rootScope.$on("$stateChangeStart", function () {
             if ($rootScope.lstModel && $rootScope.lstModel.length >= 1) {
                 angular.forEach($rootScope.lstModel, function (value, key) {
                     try {
@@ -140,22 +132,20 @@ define([
                     catch (error) {
                         console.log("error eliminando el objeto " + key + "\n" + error)
                     }
-
                 });
                 $rootScope.lstModel = [];
             }
         });
-        
     });
     app.factory('$exceptionHandler', ['$log', '$injector', function ($log, $injector) {
         return function myExceptionHandler(exception, cause) {
             var $http = $injector.get('$http');
             $log.warn(exception, cause);
-            // muestro sólo esto y ya tira error
+            // muestro sï¿½lo esto y ya tira error
             console.log($http);
         }
     }]);
-	return app;
+    return app;
 });
 
 //case 'reload':

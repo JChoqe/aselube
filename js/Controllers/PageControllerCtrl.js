@@ -21,33 +21,26 @@ define([
             $rootScope.ThemesInit = InitConfig.ThemesImage;
             $rootScope.ThemesImage = InitConfig.ThemesImage;
         }
-
         setQlikTheme(qlik, $rootScope.ThemesInit)
         $rootScope.lstModel = [];
-
         $scope.ShowContextMenu = function (e, id) {
             var mousePosition = {};
             var menuPostion = {};
             var menuDimension = {};
-
             menuDimension.x = 250;
             menuDimension.y = 200;
             mousePosition.x = event.pageX;
             mousePosition.y = event.pageY;
-
             if (mousePosition.x + menuDimension.x > $(window).width() + $(window).scrollLeft()) {
                 menuPostion.x = mousePosition.x - menuDimension.x;
             } else {
                 menuPostion.x = mousePosition.x;
             }
-
             if (mousePosition.y + menuDimension.y > $(window).height() + $(window).scrollTop()) {
                 menuPostion.y = mousePosition.y - menuDimension.y;
             } else {
                 menuPostion.y = mousePosition.y;
             }
-
-
             $('contextmenu').remove().promise().done(function () {
                 var _html = '<contextmenu object-id="' + id + '" top="' + menuPostion.y + '" left="' + menuPostion.x + '"></contextmenu>';
                 var el = $compile(_html)($scope);
@@ -57,13 +50,11 @@ define([
         $scope.close = function () {
             $('contextmenu').remove();
         }
-
         $rootScope.IsPersonalMode = '';
         var global = qlik.getGlobal(config);
         global.isPersonalMode(function (reply) {
             $rootScope.IsPersonalMode = reply.qReturn;
         });
-
         $rootScope.getPersonalMode = function () {
             var defer = jQuery.Deferred();
             var global = qlik.getGlobal(config);
@@ -72,7 +63,6 @@ define([
             });
             return defer.promise();
         }
-
         /* Bloqueo cambio de páginas */
         $rootScope.addElement = function () {
             var newEle = angular.element('<div class="mz-block"><div class="flex-loader-cover"><div class="loaderEquializador">Loading...</div></div></div > ');
@@ -87,7 +77,6 @@ define([
                 });
             }, 800);
         }
-
         //Toogle Sidebar Menú
         $scope.OpenSidebarMenu = false;
         $scope.toogleSidebar = function () {
@@ -96,7 +85,6 @@ define([
                 qlik.resize();
             }, 300);
         }
-
         //Toogle menu Ipad/responsive
         $scope.ShowMenu = false;
         $scope.toogleMenu = function () {

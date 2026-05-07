@@ -8,8 +8,7 @@ var dir = href.substring(0, href.lastIndexOf('/')) + "/";
 define([
     'js/qlik',
     'app'
-], function (qlik, app) { 
-
+], function (qlik, app) {
     app.controller('kpiIncludeCtrl', function ($rootScope) {
         $(".qlik-embed").each(function () {
             var qvid = $(this).data("qlik-objid");
@@ -19,9 +18,5 @@ define([
                 }
             });
         });
-    });        
+    });
 });
-
-
-
-

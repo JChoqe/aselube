@@ -22,16 +22,3 @@ function changeThemes(qlik, name) {
 function resetQlikTheme(qlik) {
     qlik.theme.apply('_Theme-Default');
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

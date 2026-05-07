@@ -1,14 +1,12 @@
 'use strict';
-
 define([
-	'js/qlik',
+    'js/qlik',
     'jquery',
     'app',
     'Modernizr',
     'extControllers/InitConfig',
-    'extControllers/_Routes/routerConfig',    
+    'extControllers/_Routes/routerConfig',
     'extControllers/Equalizador/equalizadorCtrl',
-
     'extDirectives/bookmarks/bookmarks',
     'extDirectives/errorsManagement/errorsManagement',
     'extDirectives/filters/filters',
@@ -22,28 +20,18 @@ define([
     'extDirectives/options/options',
     'extDirectives/kpioptions/kpioptions',
     'extDirectives/optionswellcome/optionswellcome',
-
     'extServices/getAppService',
-
     'extControllers/PageControllerCtrl',
     'extControllers/Home/HomeCtrl',
     'extControllers/Home/WellcomeCtrl',
     'extControllers/_PagesCtrls/StateParentCtrl',
     'extControllers/_PagesCtrls/StateChildrenCtrl',
     'extControllers/KpiCtrl',
-    
-    
-
-    
-
-                    
 ], function (qlik, $, app, Modernizr) {
-    var dataIDPDF;            
+    var dataIDPDF;
     var gSenseApp = {
         init: function () {
-  
         }
-    };             
-    gSenseApp.init();      
+    };
+    gSenseApp.init();
 });
-
