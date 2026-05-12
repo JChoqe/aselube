@@ -1,9 +1,11 @@
-﻿<!--
+<!--
     Speeddial parámetros :
     object-id : id del oBjeto
     object-equalizer : muestra botón configuraciones true/false
 
 -->
+
+<!-- ── NAVEGACIÓN Y SELECCIONES ───────────────────────────────────────────── -->
 <div id="page-nav">
     <div class="sc_menu clearfix">
         <div id="box_ListaMenu">
@@ -14,44 +16,77 @@
 <div id="box-current-selecctions">
     <div style="width: 100%;" current-selections="app" class="CurrentSelections"></div>
 </div>
+
+<!-- ── CONTENEDOR PRINCIPAL ───────────────────────────────────────────────── -->
 <div class="row-page row m-0 p-0" id="page-container">
+
+    <!-- ══════════════════════════════════════════════════════════════════════
+         FILA 1
+         ══════════════════════════════════════════════════════════════════════ -->
+
+    <!-- ── BLOQUE IZQUIERDO · 8/12 col · Altura 60% ──────────────────────
+         Contiene: 5 KPIs en fila superior + 1 gráfica debajo (box_mix)
+         Objeto principal (gráfica): objid="QQJ"  id="PZHzp"
+    ─────────────────────────────────────────────────────────────────────── -->
     <div
         class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 mzh-xl-60 mzh-lg-60 mzh-md-100 mzh-sm-100 mzh-xs-200 mzh-60 box_object box_mix_object">
         <speeldial object-id="PZHzp" object-equalizer="true"></speeldial>
         <div class="box_mix">
+
+            <!-- ── FILA DE KPIs · altura 30% ─────────────────────────────
+                 5 KPIs lado a lado, cada uno 20% del ancho
+            ──────────────────────────────────────────────────────────────── -->
             <div class="box_object_inner_kpi kpi-mix mzh-xl-30 mzh-lg-30 mzh-md-20 mzh-sm-40 mzh-xs-50 mzh-30">
 
+                <!-- KPI 1 · objid="pEpHTD" -->
                 <div style="width: 20%; flex: none; max-width: unset;"
                     class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12 mzh-xl-100 mzh-lg-100 mzh-md-100 mzh-sm-50 mzh-xs-33 mzh-100 item-inner-kpi">
                     <div class="qlik-embed qlik-embed-kpi" data-qlik-objid="pEpHTD"></div>
                 </div>
 
+                <!-- KPI 2 · objid="SGRzgL" -->
                 <div style="width: 20%; flex: none; max-width: unset;"
                     class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12 mzh-xl-100 mzh-lg-100 mzh-md-100 mzh-sm-50 mzh-xs-33 mzh-100 item-inner-kpi">
                     <div class="qlik-embed qlik-embed-kpi" data-qlik-objid="SGRzgL"></div>
                 </div>
 
+                <!-- KPI 3 · objid="BnEKH" -->
                 <div style="width: 20%; flex: none; max-width: unset;"
                     class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12 mzh-xl-100 mzh-lg-100 mzh-md-100 mzh-sm-50 mzh-xs-33 mzh-100 item-inner-kpi">
                     <div class="qlik-embed qlik-embed-kpi" data-qlik-objid="BnEKH"></div>
                 </div>
+
+                <!-- KPI 4 · objid="zxmqPE" -->
                 <div style="width: 20%; flex: none; max-width: unset;"
                     class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12 mzh-xl-100 mzh-lg-100 mzh-md-100 mzh-sm-50 mzh-xs-33 mzh-100 item-inner-kpi">
                     <div class="qlik-embed qlik-embed-kpi" data-qlik-objid="zxmqPE"></div>
                 </div>
+
+                <!-- KPI 5 · objid="VmLDDqG" -->
                 <div style="width: 20%; flex: none; max-width: unset;"
                     class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12 mzh-xl-100 mzh-lg-100 mzh-md-100 mzh-sm-50 mzh-xs-33 mzh-100 item-inner-kpi">
                     <div class="qlik-embed qlik-embed-kpi" data-qlik-objid="VmLDDqG"></div>
                 </div>
+
             </div>
+            <!-- /FILA DE KPIs -->
+
+            <!-- ── GRÁFICA PRINCIPAL · objid="QQJ" · altura 70% ──────── -->
             <div class="box_object_inner_grafico mzh-xl-70 mzh-lg-70 mzh-md-80 mzh-sm-60 mzh-xs-50 mzh-70">
                 <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel"
                         ng-click="ShowContextMenu($event,'PZHzp')"></i></span>
                 <div class="qlik-embed hasDataView" id="PZHzp" data-qlik-objid="QQJ"
                     ng-right-click="ShowContextMenu($event,'PZHzp')"></div>
             </div>
+            <!-- /GRÁFICA PRINCIPAL -->
+
         </div>
     </div>
+    <!-- /BLOQUE IZQUIERDO FILA 1 -->
+
+    <!-- ── BLOQUE DERECHO · 4/12 col · Altura 60% ────────────────────────
+         Gráfica: objid="CyrMqmJ"  id="FjpJKN"
+    ─────────────────────────────────────────────────────────────────────── -->
     <div
         class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 mzh-xl-60 mzh-lg-60 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-60 box_object">
         <speeldial object-id="FjpJKN" object-equalizer="true"></speeldial>
@@ -60,7 +95,15 @@
         <div class="qlik-embed hasDataView" id="FjpJKN" data-qlik-objid="CyrMqmJ"
             ng-right-click="ShowContextMenu($event,'FjpJKN')"></div>
     </div>
+    <!-- /BLOQUE DERECHO FILA 1 -->
 
+    <!-- ══════════════════════════════════════════════════════════════════════
+         FILA 2
+         ══════════════════════════════════════════════════════════════════════ -->
+
+    <!-- ── GRÁFICA IZQUIERDA · 5/12 col · Altura 40% ─────────────────────
+         Gráfica: objid="tMjDY"  id="nfWZ"
+    ─────────────────────────────────────────────────────────────────────── -->
     <div
         class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 mzh-xl-40 mzh-lg-40 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-40 box_object">
         <speeldial object-id="nfWZ" object-equalizer="true"></speeldial>
@@ -69,6 +112,11 @@
         <div class="qlik-embed hasDataView" id="nfWZ" data-qlik-objid="tMjDY"
             ng-right-click="ShowContextMenu($event,'nfWZ')"></div>
     </div>
+    <!-- /GRÁFICA IZQUIERDA FILA 2 -->
+
+    <!-- ── GRÁFICA CENTRO · 3/12 col · Altura 40% ────────────────────────
+         Gráfica: objid="vPALgvh"  id="mCzjv"
+    ─────────────────────────────────────────────────────────────────────── -->
     <div
         class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 mzh-xl-40 mzh-lg-40 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-100 box_object">
         <speeldial object-id="mCzjv" object-equalizer="false"></speeldial>
@@ -77,9 +125,19 @@
         <div class="qlik-embed hasDataView" id="mCzjv" data-qlik-objid="vPALgvh"
             ng-right-click="ShowContextMenu($event,'mCzjv')"></div>
     </div>
-    <!-- Kpis -->
+    <!-- /GRÁFICA CENTRO FILA 2 -->
+
+    <!-- ── BLOQUE KPIs DERECHA · 4/12 col · Altura 40% ──────────────────
+         3 KPIs apilados:
+           · KPI grande (100% ancho, 50% alto): objid="nBTERs"
+           · KPI pequeño izquierda (50% ancho, 50% alto): objid="sjQxwPv"
+           · KPI pequeño derecha  (50% ancho, 50% alto): objid="RmsMmkH"
+         Clase contenedora: kpi-dashboard  /  mz-box-kpi-inner (estilo de cada KPI)
+    ─────────────────────────────────────────────────────────────────────── -->
     <div
         class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 mzh-xl-40 mzh-lg-40 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-40 m-0 p-0 kpi-dashboard">
+
+        <!-- KPI grande · objid="nBTERs" · 100% ancho · 50% alto -->
         <div
             class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mzh-xl-50 mzh-lg-50 mzh-md-33 mzh-sm-50 mzh-xs-50 mzh-50 box_object">
             <div class="mz-box-kpi-inner">
@@ -87,20 +145,32 @@
                     data-qlik-objid="nBTERs"></div>
             </div>
         </div>
+
+        <!-- Fila inferior: 2 KPIs pequeños · 50% ancho cada uno · 50% alto -->
         <div
             class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mzh-xl-50 mzh-lg-50 mzh-md-66 mzh-sm-50 mzh-xs-50 mzh-50 m-0 p-0 row">
+
+            <!-- KPI pequeño izquierda · objid="sjQxwPv" -->
             <div
                 class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 mzh-xl-100 mzh-lg-100 mzh-md-50 mzh-sm-50 mzh-xs-50 mzh-50 box_object">
                 <div class="mz-box-kpi-inner">
                     <div class="qlik-embed qlik-embed-kpi" id="AxAdDsP" data-qlik-objid="sjQxwPv"></div>
                 </div>
             </div>
+
+            <!-- KPI pequeño derecha · objid="RmsMmkH" -->
             <div
                 class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 mzh-xl-100 mzh-lg-100 mzh-md-50 mzh-sm-50 mzh-xs-50 mzh-50 box_object">
                 <div class="mz-box-kpi-inner">
                     <div class="qlik-embed qlik-embed-kpi" id="WUPYKU" data-qlik-objid="RmsMmkH"></div>
                 </div>
             </div>
+
         </div>
+        <!-- /Fila inferior KPIs pequeños -->
+
     </div>
+    <!-- /BLOQUE KPIs DERECHA FILA 2 -->
+
 </div>
+<!-- /CONTENEDOR PRINCIPAL -->
