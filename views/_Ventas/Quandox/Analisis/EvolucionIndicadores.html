@@ -24,34 +24,109 @@ ShowContextMenu parámetros'
 <div id="box-current-selecctions">
     <div style="width: 100%;" current-selections="app" class="CurrentSelections"></div>
 </div>
+
 <div class="row-page row m-0 p-0" id="page-container">
-    <div class="mzh-xl-15 mzh-lg-15 mzh-md-100 mzh-sm-100 mzh-xs-150 mzh-20 box_object_kpi" ng-include="'views/_Ventas/General/_GeneralKpi.html'"></div>
 
-    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mzh-xl-45 mzh-lg-45 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-80 box_object">
+    <div
+        class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 mzh-xl-60 mzh-lg-60 mzh-md-100 mzh-sm-100 mzh-xs-200 mzh-60 box_object box_mix_object">
+        <speeldial object-id="" object-equalizer="true"></speeldial>
+        <div class="box_mix">
+
+            <!-- ── FILA DE KPIs · altura 30% ─────────────────────────────
+                 5 KPIs lado a lado, cada uno 20% del ancho
+            ──────────────────────────────────────────────────────────────── -->
+            <div class="box_object_inner_kpi kpi-mix mzh-xl-30 mzh-lg-30 mzh-md-20 mzh-sm-40 mzh-xs-50 mzh-30">
+
+                <!-- KPI 1 · objid="" -->
+                <div style="width: 20%; flex: none; max-width: unset;"
+                    class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12 mzh-xl-100 mzh-lg-100 mzh-md-100 mzh-sm-50 mzh-xs-33 mzh-100 item-inner-kpi">
+                    <div class="qlik-embed qlik-embed-kpi" data-qlik-objid="fbyxZSR"></div>
+                </div>
+
+                <!-- KPI 2 · objid="" -->
+                <div style="width: 20%; flex: none; max-width: unset;"
+                    class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12 mzh-xl-100 mzh-lg-100 mzh-md-100 mzh-sm-50 mzh-xs-33 mzh-100 item-inner-kpi">
+                    <div class="qlik-embed qlik-embed-kpi" data-qlik-objid="bngQDDm"></div>
+                </div>
+
+                <!-- KPI 3 · objid="" -->
+                <div style="width: 20%; flex: none; max-width: unset;"
+                    class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12 mzh-xl-100 mzh-lg-100 mzh-md-100 mzh-sm-50 mzh-xs-33 mzh-100 item-inner-kpi">
+                    <div class="qlik-embed qlik-embed-kpi" data-qlik-objid="YpNm"></div>
+                </div>
+
+                <!-- KPI 4 · objid="" -->
+                <div style="width: 20%; flex: none; max-width: unset;"
+                    class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12 mzh-xl-100 mzh-lg-100 mzh-md-100 mzh-sm-50 mzh-xs-33 mzh-100 item-inner-kpi">
+                    <div class="qlik-embed qlik-embed-kpi" data-qlik-objid="kyGJea"></div>
+                </div>
+
+                <!-- KPI 5 · objid="" -->
+                <div style="width: 20%; flex: none; max-width: unset;"
+                    class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12 mzh-xl-100 mzh-lg-100 mzh-md-100 mzh-sm-50 mzh-xs-33 mzh-100 item-inner-kpi">
+                    <div class="qlik-embed qlik-embed-kpi" data-qlik-objid="mCnGb"></div>
+                </div>
+
+            </div>
+            <!-- /FILA DE KPIs -->
+
+            <!-- ── GRÁFICA PRINCIPAL · objid="" · altura 70% ──────── -->
+            <div class="box_object_inner_grafico mzh-xl-70 mzh-lg-70 mzh-md-80 mzh-sm-60 mzh-xs-50 mzh-70">
+                <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel"
+                        ng-click="ShowContextMenu($event,'')"></i></span>
+                <div class="qlik-embed hasDataView" id="" data-qlik-objid="dKJMj"
+                    ng-right-click="ShowContextMenu($event,'')"></div>
+            </div>
+            <!-- /GRÁFICA PRINCIPAL -->
+
+        </div>
+    </div>
+
+    <div
+        class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 mzh-xl-60 mzh-lg-60 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-80 box_object">
         <speeldial object-id="2f9261b4-4a79-4249-a1d8-2d1f4b71184e" object-equalizer="true"></speeldial>
-        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'2f9261b4-4a79-4249-a1d8-2d1f4b71184e')"></i></span>
-        <div class="qlik-embed hasDataView" id="2f9261b4-4a79-4249-a1d8-2d1f4b71184e" data-qlik-objid="2f9261b4-4a79-4249-a1d8-2d1f4b71184e" ng-right-click="ShowContextMenu($event,'2f9261b4-4a79-4249-a1d8-2d1f4b71184e')"></div>
+        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel"
+                ng-click="ShowContextMenu($event,'2f9261b4-4a79-4249-a1d8-2d1f4b71184e')"></i></span>
+        <div class="qlik-embed hasDataView" id="2f9261b4-4a79-4249-a1d8-2d1f4b71184e"
+            data-qlik-objid="2f9261b4-4a79-4249-a1d8-2d1f4b71184e"
+            ng-right-click="ShowContextMenu($event,'2f9261b4-4a79-4249-a1d8-2d1f4b71184e')"></div>
     </div>
 
-    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 mzh-xl-40 mzh-lg-40 mzh-md-50 mzh-sm-50 mzh-xs-100 mzh-40 box_object">
+    <div class="mzh-xl-15 mzh-lg-15 mzh-md-100 mzh-sm-100 mzh-xs-150 mzh-20 box_object_kpi"
+        ng-include="'views/_Ventas/General/_GeneralKpi.html'">
+    </div>
+
+    <div
+        class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 mzh-xl-40 mzh-lg-40 mzh-md-50 mzh-sm-50 mzh-xs-100 mzh-40 box_object">
         <speeldial object-id="KMgBBkL" object-equalizer="true"></speeldial>
-        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'KMgBBkL')"></i></span>
-        <div class="qlik-embed hasDataView" id="KMgBBkL" data-qlik-objid="KMgBBkL" ng-right-click="ShowContextMenu($event,'KMgBBkL')"></div>
+        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel"
+                ng-click="ShowContextMenu($event,'KMgBBkL')"></i></span>
+        <div class="qlik-embed hasDataView" id="KMgBBkL" data-qlik-objid="KMgBBkL"
+            ng-right-click="ShowContextMenu($event,'KMgBBkL')"></div>
     </div>
-    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 mzh-xl-40 mzh-lg-40 mzh-md-50 mzh-sm-50 mzh-xs-100 mzh-40 box_object">
+    <div
+        class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 mzh-xl-40 mzh-lg-40 mzh-md-50 mzh-sm-50 mzh-xs-100 mzh-40 box_object">
         <speeldial object-id="HDMuhek" object-equalizer="true"></speeldial>
-        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'HDMuhek')"></i></span>
-        <div class="qlik-embed hasDataView" id="HDMuhek" data-qlik-objid="HDMuhek" ng-right-click="ShowContextMenu($event,'HDMuhek')"></div>
+        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel"
+                ng-click="ShowContextMenu($event,'HDMuhek')"></i></span>
+        <div class="qlik-embed hasDataView" id="HDMuhek" data-qlik-objid="HDMuhek"
+            ng-right-click="ShowContextMenu($event,'HDMuhek')"></div>
     </div>
-    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 mzh-xl-40 mzh-lg-40 mzh-md-50 mzh-sm-50 mzh-xs-100 mzh-40 box_object">
+    <div
+        class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 mzh-xl-40 mzh-lg-40 mzh-md-50 mzh-sm-50 mzh-xs-100 mzh-40 box_object">
         <speeldial object-id="FDhZJj" object-equalizer="true"></speeldial>
-        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'FDhZJj')"></i></span>
-        <div class="qlik-embed hasDataView" id="FDhZJj" data-qlik-objid="FDhZJj" ng-right-click="ShowContextMenu($event,'FDhZJj')"></div>
+        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel"
+                ng-click="ShowContextMenu($event,'FDhZJj')"></i></span>
+        <div class="qlik-embed hasDataView" id="FDhZJj" data-qlik-objid="FDhZJj"
+            ng-right-click="ShowContextMenu($event,'FDhZJj')"></div>
     </div>
-    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 mzh-xl-40 mzh-lg-40 mzh-md-50 mzh-sm-50 mzh-xs-100 mzh-40 box_object">
+    <div
+        class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 mzh-xl-40 mzh-lg-40 mzh-md-50 mzh-sm-50 mzh-xs-100 mzh-40 box_object">
         <speeldial object-id="PPgUwA" object-equalizer="true"></speeldial>
-        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'PPgUwA')"></i></span>
-        <div class="qlik-embed hasDataView" id="PPgUwA" data-qlik-objid="PPgUwA" ng-right-click="ShowContextMenu($event,'PPgUwA')"></div>
+        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel"
+                ng-click="ShowContextMenu($event,'PPgUwA')"></i></span>
+        <div class="qlik-embed hasDataView" id="PPgUwA" data-qlik-objid="PPgUwA"
+            ng-right-click="ShowContextMenu($event,'PPgUwA')"></div>
     </div>
 
 
