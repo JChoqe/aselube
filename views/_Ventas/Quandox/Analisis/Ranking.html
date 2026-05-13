@@ -25,14 +25,41 @@ ShowContextMenu parámetros'
     <div style="width: 100%;" current-selections="app" class="CurrentSelections"></div>
 </div>
 <div class="row-page row m-0 p-0" id="page-container">
-    <div class="mzh-xl-15 mzh-lg-15 mzh-md-100 mzh-sm-100 mzh-xs-150 mzh-20 box_object_kpi" ng-include="'views/_Ventas/General/_GeneralKpi.html'"></div>
+    <!-- ── FILA 1 · 6 KPIs · Altura 15% ─────────────────────────────────
+         Cada KPI ocupa 2/12 cols (16.67% del ancho)
+    ─────────────────────────────────────────────────────────────────────── -->
+    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-xs-6 mzh-xl-15 mzh-lg-15 mzh-md-15 mzh-sm-15 mzh-xs-15 mzh-15 box_object">
+        <div class="qlik-embed qlik-embed-kpi" data-qlik-objid="vhcfzp"></div>
+    </div>
+    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-xs-6 mzh-xl-15 mzh-lg-15 mzh-md-15 mzh-sm-15 mzh-xs-15 mzh-15 box_object">
+        <div class="qlik-embed qlik-embed-kpi" data-qlik-objid="mVPdwTD"></div>
+    </div>
+    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-xs-6 mzh-xl-15 mzh-lg-15 mzh-md-15 mzh-sm-15 mzh-xs-15 mzh-15 box_object">
+        <div class="qlik-embed qlik-embed-kpi" data-qlik-objid="LpjVGW"></div>
+    </div>
+    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-xs-6 mzh-xl-15 mzh-lg-15 mzh-md-15 mzh-sm-15 mzh-xs-15 mzh-15 box_object">
+        <div class="qlik-embed qlik-embed-kpi" data-qlik-objid="mpyWQNf"></div>
+    </div>
+    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-xs-6 mzh-xl-15 mzh-lg-15 mzh-md-15 mzh-sm-15 mzh-xs-15 mzh-15 box_object">
+        <div class="qlik-embed qlik-embed-kpi" data-qlik-objid="cPmTvj"></div>
+    </div>
+    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-xs-6 mzh-xl-15 mzh-lg-15 mzh-md-15 mzh-sm-15 mzh-xs-15 mzh-15 box_object">
+        <div class="qlik-embed qlik-embed-kpi" data-qlik-objid="FfbfZXN"></div>
+    </div>
+    <!-- /FILA 1 KPIs -->
 
+    <!-- ── FILA 2 · TABLA · 8/12 col · Altura 85% ───────────────────────
+         objid="WvbS"
+    ─────────────────────────────────────────────────────────────────────── -->
     <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12 mzh-xl-85 mzh-lg-85 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-80 box_object">
         <speeldial object-id="WvbS" object-equalizer="true"></speeldial>
-        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'WvbS')"></i></span>
-        <div class="qlik-embed hasDataView" id="WvbS" data-qlik-objid="WvbS" ng-right-click="ShowContextMenu($event,'WvbS')"></div>
+        <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'Qbhzb')"></i></span>
+        <div class="qlik-embed hasDataView" id="Qbhzb" data-qlik-objid="WvQbhzbbS" ng-right-click="ShowContextMenu($event,'Qbhzb')"></div>
     </div>
 
+    <!-- ── FILA 2 · GRÁFICA DE BARRAS · 4/12 col · Altura 85% ──────────
+         objid="jaxjxQ"
+    ─────────────────────────────────────────────────────────────────────── -->
     <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 mzh-xl-85 mzh-lg-85 mzh-md-100 mzh-sm-100 mzh-xs-100 mzh-80 box_object">
         <speeldial object-id="jaxjxQ" object-equalizer="true"></speeldial>
         <span class="options-responsive"><i class="lui-icon lui-icon--cogwheel" ng-click="ShowContextMenu($event,'jaxjxQ')"></i></span>
